@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbf8f1;
+  --foreground: #1f2a36;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-fraunces);
+  --font-mono: var(--font-geist-mono);
+
+  /* Brand palette inspired by the Benchmark Index brochure */
+  --color-cream-50: #fbf8f1;
+  --color-cream-100: #f5efe0;
+  --color-cream-200: #ebe3cf;
+  --color-sand-300: #dfd4bb;
+  --color-sand-400: #cdbf9f;
+
+  --color-slate-blue-50: #eef2f5;
+  --color-slate-blue-100: #d7e0e7;
+  --color-slate-blue-200: #b6c3cf;
+  --color-slate-blue-300: #94a5b4;
+  --color-slate-blue-400: #7c91a3;
+  --color-slate-blue-500: #6b7f92;
+  --color-slate-blue-600: #556676;
+  --color-slate-blue-700: #3f4d5b;
+  --color-slate-blue-800: #2a3541;
+
+  --color-sage-100: #eef0df;
+  --color-sage-200: #dbe0c1;
+  --color-sage-300: #c2cc9f;
+  --color-sage-400: #adb98a;
+  --color-sage-500: #8e9c6b;
+  --color-sage-600: #707c53;
+
+  --color-brick-300: #d89b9c;
+  --color-brick-400: #c78788;
+  --color-brick-500: #a9696b;
+  --color-brick-600: #8d5254;
+
+  --color-ink: #1f2a36;
+  --color-ink-soft: #344250;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-serif), ui-serif, Georgia, "Times New Roman", serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+}
+
+/* Subtle section divider */
+.hairline {
+  background: linear-gradient(to right, transparent, rgba(31, 42, 54, 0.12), transparent);
+  height: 1px;
+}
+
+/* Soft grain overlay used on hero images */
+.img-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(107, 127, 146, 0.55), rgba(169, 105, 107, 0.35));
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
