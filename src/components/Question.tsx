@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Award, Users2 } from "lucide-react";
+import { Award } from "lucide-react";
 
 export default function Question() {
   return (
@@ -15,54 +15,8 @@ export default function Question() {
         </div>
 
         <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
-          {/* NSBC Africa Platinum Membership - restyled to match */}
-          <div className="lg:col-span-6">
-            <div className="overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-sm">
-              <div className="img-overlay relative h-56">
-                <Image
-                  src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80"
-                  alt="Business networking"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-8 lg:p-10">
-                <div className="inline-flex items-center gap-2 rounded-full bg-sage-100 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-sage-600">
-                  <Users2 size={14} />
-                  Membership
-                </div>
-                <h4 className="mt-4 font-display text-2xl text-ink lg:text-3xl">
-                  About NSBC Africa Platinum Membership
-                </h4>
-                <p className="mt-4 text-sm italic leading-relaxed text-ink-soft">
-                  Join Conversations and initiatives for Small and Medium
-                  Business Entrepreneurs in South Africa and Africa.
-                </p>
-
-                <ul className="mt-6 space-y-4 text-sm leading-relaxed text-ink-soft">
-                  <li className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-                    we advocate for Small and Medium Enterprises and encourage
-                    all SME businesses to join an efficient membership
-                    solution.
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-                    we are an official NSBC licensee for NSBC Africa Platinum
-                    Membership and engages with SMEs to join it.
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-                    this is a ongoing primary project where we will support
-                    and engage with businesses in the SME landscape.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
           {/* NSBC Membership card */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-12">
             <div className="overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-sm">
               <div className="img-overlay relative h-56">
                 <Image

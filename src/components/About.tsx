@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Handshake,
   Target,
@@ -38,10 +39,10 @@ export default function About() {
           <span className="text-2xl font-semibold uppercase tracking-[0.2em] text-brick-500">
             About
           </span>
-          <h2 className="mt-3 border-l-2 border-brick-500 pl-5 font-display text-4xl text-ink lg:text-5xl">
+          <h2 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
             FlipWorks Consulting
           </h2>
-          <p className="mt-5 text-lg italic leading-relaxed text-ink-soft">
+          <p className="mt-5 border-l-2 border-brick-500 pl-5 text-lg italic leading-relaxed text-ink-soft">
             &ldquo;The Consulting partner where we are working together, Flipping
             the Works and Designing a Better Business!&rdquo;
           </p>
@@ -91,6 +92,61 @@ export default function About() {
           })}
         </div>
 
+        {/* Divider */}
+        <div className="mt-12 h-[2px] w-full rounded-full bg-brick-500" />
+
+        {/* Idea heading */}
+        <div className="mt-10 flex items-center justify-center gap-3 text-center">
+          <Lightbulb size={28} className="text-brick-500" />
+          <h3 className="font-display text-2xl font-semibold uppercase tracking-wide text-ink lg:text-3xl">
+            Start by Benchmarking Your Business Practices!
+          </h3>
+        </div>
+
+        {/* NSBC Africa Platinum Membership - long card */}
+        <div className="mt-12 grid gap-10 overflow-hidden rounded-3xl border border-ink/10 bg-slate-blue-500 lg:grid-cols-12">
+          <div className="relative lg:col-span-5">
+            <div className="img-overlay relative h-full min-h-[320px]">
+              <Image
+                src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80"
+                alt="Business networking"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="p-10 lg:col-span-7 lg:p-14">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-sage-300">
+              Membership
+            </span>
+            <h3 className="mt-3 font-display text-3xl text-cream-50 lg:text-4xl">
+              About NSBC Africa Platinum Membership
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-cream-100/90">
+              Join Conversations and Initiatives for Small and Medium Business
+              Entrepreneurs in South Africa and Africa. Become a Platinum
+              Member of the most Comprehensive platform of its kind available.
+            </p>
+            <ul className="mt-6 space-y-3 text-sm text-cream-100/85">
+              <li className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-400" />
+                we advocate for Small and Medium Enterprises and encourage all
+                SME businesses to join an efficient membership solution.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-400" />
+                we are an official NSBC licensee for NSBC Africa Platinum
+                Membership and engages with SMEs to join it.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-400" />
+                this is a ongoing primary project where we will support and
+                engage with businesses in the SME landscape.
+              </li>
+            </ul>
+          </div>
+        </div>
+
         {/* Question / Argument block */}
         <div className="mt-12 rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-slate-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-blue-700">
@@ -100,7 +156,7 @@ export default function About() {
 
           <h3 className="mt-5 max-w-4xl font-display text-4xl leading-tight text-ink lg:text-5xl">
             The world around you &ndash; and your business &ndash; is filled
-            with <span className="italic text-slate-blue-500">uncertainty</span>.
+            with <span className="italic" style={{ color: "#82a590" }}>uncertainty</span>.
           </h3>
 
           <ul className="mt-8 max-w-4xl space-y-4 text-base leading-relaxed text-ink-soft">
