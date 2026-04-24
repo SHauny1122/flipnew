@@ -8,6 +8,8 @@ import {
   Compass,
   Layers,
   Gauge,
+  Sparkles,
+  Lightbulb,
 } from "lucide-react";
 
 const problemPoints = [
@@ -33,10 +35,10 @@ export default function About() {
     <section id="about" className="relative bg-cream-100 py-24 lg:py-32">
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
         <div className="max-w-2xl">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
+          <span className="text-2xl font-semibold uppercase tracking-[0.2em] text-brick-500">
             About
           </span>
-          <h2 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
+          <h2 className="mt-3 border-l-2 border-brick-500 pl-5 font-display text-4xl text-ink lg:text-5xl">
             FlipWorks Consulting
           </h2>
           <p className="mt-5 text-lg italic leading-relaxed text-ink-soft">
@@ -45,8 +47,8 @@ export default function About() {
           </p>
         </div>
 
-        {/* Consulting three points */}
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        {/* Consulting five points */}
+        <div className="mt-12 grid gap-6 md:grid-cols-3 lg:grid-cols-5">
           {[
             {
               icon: HeartHandshake,
@@ -60,63 +62,79 @@ export default function About() {
               icon: Handshake,
               text: "consulting is designed and tailored by which your business can thrive, grow and evolve in the face of uncertainty and constant challenges.",
             },
+            {
+              icon: Sparkles,
+              text: "",
+            },
+            {
+              icon: Lightbulb,
+              text: "",
+            },
           ].map((item, i) => {
             const Icon = item.icon;
             return (
               <div
                 key={i}
-                className="group relative rounded-2xl border border-ink/10 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                className="group relative rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-blue-50 text-slate-blue-600">
-                  <Icon size={20} />
+                <div className="flex items-start gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-blue-50 text-slate-blue-600">
+                    <Icon size={20} />
+                  </div>
+                  <p className="text-sm leading-relaxed text-ink-soft">
+                    {item.text}
+                  </p>
                 </div>
-                <p className="mt-5 text-sm leading-relaxed text-ink-soft">
-                  {item.text}
-                </p>
-                <div className="absolute inset-x-7 bottom-0 h-px origin-left scale-x-0 bg-brick-500 transition group-hover:scale-x-100" />
+                <div className="absolute inset-x-6 bottom-0 h-px origin-left scale-x-0 bg-brick-500 transition group-hover:scale-x-100" />
               </div>
             );
           })}
         </div>
 
         {/* Question / Argument block */}
-        <div className="mt-20 max-w-3xl">
+        <div className="mt-12 rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-slate-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-blue-700">
             <HelpCircle size={14} />
             Question? / Argument
           </div>
 
-          <h3 className="mt-5 font-display text-4xl leading-tight text-ink lg:text-5xl">
+          <h3 className="mt-5 max-w-4xl font-display text-4xl leading-tight text-ink lg:text-5xl">
             The world around you &ndash; and your business &ndash; is filled
             with <span className="italic text-slate-blue-500">uncertainty</span>.
           </h3>
 
-          <div className="mt-8 space-y-5 text-base leading-relaxed text-ink-soft">
-            <p>
+          <ul className="mt-8 max-w-4xl space-y-4 text-base leading-relaxed text-ink-soft">
+            <li className="flex gap-3">
+              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
               But within that uncertainty exist innumerable opportunities to
               design or (re) design, game changing businesses.
-            </p>
-            <p>These opportunities are there for the taking.</p>
-            <p>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
+              These opportunities are there for the taking.
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
               As such, better businesses are the ones that approach problems
               in a different, systematic way, turning problem situations into
               opportunities.
-            </p>
-          </div>
+            </li>
+          </ul>
+        </div>
 
-          <div className="mt-10 rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm">
-            <p className="font-display text-2xl text-ink">
-              WHAT can be BETTER in MY BUSINESS?
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              START and Join Conversations and initiatives for Small Business
-              Entrepreneurs in South Africa and Africa. Become a Platinum
-              Member of the most comprehensive platform of its kind available.
-            </p>
-            <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-brick-500">
-              monthly fee benefits
-            </p>
-          </div>
+        {/* WHAT can be BETTER callout */}
+        <div className="mt-8 max-w-3xl rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm">
+          <p className="font-display text-2xl text-ink">
+            WHAT can be BETTER in MY BUSINESS?
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+            START and Join Conversations and initiatives for Small Business
+            Entrepreneurs in South Africa and Africa. Become a Platinum
+            Member of the most comprehensive platform of its kind available.
+          </p>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-brick-500">
+            monthly fee benefits
+          </p>
         </div>
 
         {/* The Problems We Flip */}
