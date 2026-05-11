@@ -6,7 +6,6 @@ export default function Hero() {
     <section id="top" className="relative overflow-hidden bg-cream-50">
       {/* Background decorative blocks */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-slate-blue-100/60 blur-3xl" />
         <div className="absolute top-40 right-0 h-80 w-80 rounded-full bg-sage-200/50 blur-3xl" />
       </div>
 
@@ -19,7 +18,7 @@ export default function Hero() {
           </div>
 
           <h1 className="mt-6 font-display text-5xl leading-[1.02] text-ink sm:text-6xl lg:text-7xl">
-            <span style={{ color: "#5F8E9B" }}>(Re) Design</span>{" "}
+            <span style={{ color: "#5F8E9B" }}>(Re-) Design</span>{" "}
             <span className="relative inline-block align-baseline">
               <span className="absolute -top-10 left-[calc(50%+38px)] -translate-x-[25%] -rotate-12 font-serif text-4xl italic sm:text-5xl" style={{ color: "#82a590" }}>
                 Your
@@ -110,35 +109,34 @@ export default function Hero() {
                 priority
                 className="h-[520px] w-full object-cover"
               />
+            </div>
 
-              {/* Offset sage block */}
-              <div className="absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-xl bg-sage-300/80 md:block" />
+            {/* Offset sage block */}
+            <div className="absolute bottom-29 -left-4 z-10 hidden h-28 w-28 rounded-xl bg-sage-300/80 md:block" />
 
-              {/* Floating trust card */}
-              <div className="absolute bottom-4 right-4 w-64 rounded-2xl border border-ink/10 bg-white/95 p-5 shadow-xl backdrop-blur">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brick-500/10 text-brick-500">
-                    <ShieldCheck size={20} />
+            {/* Floating trust card */}
+            <div className="absolute bottom-29 -right-2 z-20 w-64 rounded-2xl border border-ink/10 bg-white/95 p-5 shadow-xl backdrop-blur">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brick-500/10 text-brick-500">
+                  <ShieldCheck size={20} />
+                </div>
+                <div>
+                  <div className="font-display text-base text-ink">
+                    Trusted Partner
                   </div>
-                  <div>
-                    <div className="font-display text-base text-ink">
-                      Trusted Partner
-                    </div>
-                    <div className="text-xs text-ink-soft/80">
-                      For SME growth
-                    </div>
+                  <div className="text-xs text-ink-soft/80">
+                    For SME growth
                   </div>
                 </div>
-                <p className="mt-3 text-xs leading-relaxed text-ink-soft">
-                  Affordable, accessible, results-oriented consulting aligned
-                  with limited budgets and internal resources.
-                </p>
               </div>
-
+              <p className="mt-3 text-xs leading-relaxed text-ink-soft">
+                Affordable, accessible, results-oriented consulting aligned with
+                limited budgets and internal resources.
+              </p>
             </div>
 
             {/* Floating top badge */}
-            <div className="absolute -top-4 left-4 z-10 hidden items-center gap-2 rounded-full border border-brick-600/30 bg-brick-500 px-4 py-2 shadow-md md:inline-flex">
+            <div className="absolute -top-4 -left-3 z-20 hidden items-center gap-2 rounded-full border border-brick-600/30 bg-brick-500 px-4 py-2 shadow-md md:inline-flex">
               <Sparkles size={14} className="text-cream-50" />
               <span className="text-xs font-medium text-cream-50">
                 Flipping the Works
@@ -146,7 +144,7 @@ export default function Hero() {
             </div>
 
             {/* Four supporting images */}
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
                 { src: "/brand/1of4.jpg", alt: "FlipWorks supporting visual 1" },
                 { src: "/brand/2of4.webp", alt: "FlipWorks supporting visual 2" },
