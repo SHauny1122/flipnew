@@ -65,11 +65,11 @@ export default function About() {
             },
             {
               icon: Sparkles,
-              text: "",
+              text: "We fuse strategic design, human-centered thinking, and rigorous business strategy to create businesses that are more innovative, resilient, and future-ready.",
             },
             {
               icon: Lightbulb,
-              text: "",
+              text: "We teamed up with IT Works to explore opportunities in AI and engage with Small and Medium Enterprises (SMEs) where AI adoption can create improvement in the works of the businesses.",
             },
           ].map((item, i) => {
             const Icon = item.icon;
@@ -78,74 +78,47 @@ export default function About() {
                 key={i}
                 className="group relative rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-blue-50 text-slate-blue-600">
-                    <Icon size={20} />
-                  </div>
-                  <p className="text-sm leading-relaxed text-ink-soft">
-                    {item.text}
-                  </p>
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-blue-50 text-slate-blue-600">
+                  <Icon size={20} />
                 </div>
+                <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+                  {item.text}
+                </p>
                 <div className="absolute inset-x-6 bottom-0 h-px origin-left scale-x-0 bg-brick-500 transition group-hover:scale-x-100" />
               </div>
             );
           })}
         </div>
 
-        {/* Divider */}
-        <div className="mt-12 h-[2px] w-full rounded-full bg-brick-500" />
-
-        {/* Idea heading */}
-        <div className="mt-10 flex items-center justify-center gap-3 text-center">
-          <Lightbulb size={28} className="text-brick-500" />
-          <h3 className="font-display text-2xl font-semibold uppercase tracking-wide text-ink lg:text-3xl">
-            Start by Benchmarking Your Business Practices!
-          </h3>
-        </div>
-
-        {/* NSBC Africa Platinum Membership - long card */}
-        <div className="mt-12 grid gap-10 overflow-hidden rounded-3xl border border-ink/10 bg-slate-blue-500 lg:grid-cols-12">
-          <div className="relative lg:col-span-5">
-            <div className="img-overlay relative h-full min-h-[320px]">
+        {/* NSBC image + long text card */}
+        <div className="mt-12 grid gap-6 lg:grid-cols-12">
+          <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-4">
+            <div className="relative h-full min-h-[220px]">
               <Image
-                src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80"
-                alt="Business networking"
+                src="/brand/1772550369227.jpg"
+                alt="NSBC Platinum Membership"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
-          <div className="p-10 lg:col-span-7 lg:p-14">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-sage-300">
-              Membership
-            </span>
-            <h3 className="mt-3 font-display text-3xl text-cream-50 lg:text-4xl">
-              About NSBC Africa Platinum Membership
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-cream-100/90">
-              Join Conversations and Initiatives for Small and Medium Business
-              Entrepreneurs in South Africa and Africa. Become a Platinum
-              Member of the most Comprehensive platform of its kind available.
+
+          <div className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm lg:col-span-8 lg:p-8">
+            <p className="text-lg leading-relaxed text-ink-soft">
+              FlipWorks advocate for Small and Medium Enterprises and in
+              support of our beliefs we would encourage all SME businesses to
+              join an efficient membership solution.
             </p>
-            <ul className="mt-6 space-y-3 text-sm text-cream-100/85">
-              <li className="flex gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-400" />
-                we advocate for Small and Medium Enterprises and encourage all
-                SME businesses to join an efficient membership solution.
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-400" />
-                we are an official NSBC licensee for NSBC Africa Platinum
-                Membership and engages with SMEs to join it.
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-400" />
-                this is a ongoing primary project where we will support and
-                engage with businesses in the SME landscape.
-              </li>
-            </ul>
+
+            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+              FlipWorks became an official NSBC licensee for their membership
+              and engages with SMEs to join the NSBC Platinum Membership.
+            </p>
           </div>
         </div>
+
+        {/* Divider */}
+        <div className="mt-12 h-[2px] w-full rounded-full bg-brick-500" />
 
         {/* Question / Argument block */}
         <div className="mt-12 rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-12">
