@@ -110,38 +110,61 @@ export default function Hero() {
                 priority
                 className="h-[520px] w-full object-cover"
               />
-            </div>
 
-            {/* Offset sage block */}
-            <div className="absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-xl bg-sage-300/80 md:block" />
+              {/* Offset sage block */}
+              <div className="absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-xl bg-sage-300/80 md:block" />
 
-            {/* Floating trust card */}
-            <div className="absolute -bottom-8 right-4 w-64 rounded-2xl border border-ink/10 bg-white/95 p-5 shadow-xl backdrop-blur">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brick-500/10 text-brick-500">
-                  <ShieldCheck size={20} />
-                </div>
-                <div>
-                  <div className="font-display text-base text-ink">
-                    Trusted Partner
+              {/* Floating trust card */}
+              <div className="absolute bottom-4 right-4 w-64 rounded-2xl border border-ink/10 bg-white/95 p-5 shadow-xl backdrop-blur">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brick-500/10 text-brick-500">
+                    <ShieldCheck size={20} />
                   </div>
-                  <div className="text-xs text-ink-soft/80">
-                    For SME growth
+                  <div>
+                    <div className="font-display text-base text-ink">
+                      Trusted Partner
+                    </div>
+                    <div className="text-xs text-ink-soft/80">
+                      For SME growth
+                    </div>
                   </div>
                 </div>
+                <p className="mt-3 text-xs leading-relaxed text-ink-soft">
+                  Affordable, accessible, results-oriented consulting aligned
+                  with limited budgets and internal resources.
+                </p>
               </div>
-              <p className="mt-3 text-xs leading-relaxed text-ink-soft">
-                Affordable, accessible, results-oriented consulting aligned
-                with limited budgets and internal resources.
-              </p>
+
+              {/* Floating top badge */}
+              <div className="absolute top-4 left-4 hidden items-center gap-2 rounded-full border border-brick-600/30 bg-brick-500 px-4 py-2 shadow-md md:inline-flex">
+                <Sparkles size={14} className="text-cream-50" />
+                <span className="text-xs font-medium text-cream-50">
+                  Flipping the Works
+                </span>
+              </div>
             </div>
 
-            {/* Floating top badge */}
-            <div className="absolute -top-4 -left-4 hidden items-center gap-2 rounded-full border border-brick-600/30 bg-brick-500 px-4 py-2 shadow-md md:inline-flex">
-              <Sparkles size={14} className="text-cream-50" />
-              <span className="text-xs font-medium text-cream-50">
-                Flipping the Works
-              </span>
+            {/* Four supporting images */}
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                { src: "/brand/1of4.jpg", alt: "FlipWorks supporting visual 1" },
+                { src: "/brand/2of4.webp", alt: "FlipWorks supporting visual 2" },
+                { src: "/brand/3of4.jpg", alt: "FlipWorks supporting visual 3" },
+                { src: "/brand/4of4.jpg", alt: "FlipWorks supporting visual 4" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="img-overlay relative overflow-hidden rounded-lg shadow-md ring-1 ring-ink/10"
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={320}
+                    height={220}
+                    className="h-20 w-full object-cover sm:h-24"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
