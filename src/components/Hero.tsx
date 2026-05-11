@@ -135,13 +135,14 @@ export default function Hero() {
                 </p>
               </div>
 
-              {/* Floating top badge */}
-              <div className="absolute top-4 left-4 hidden items-center gap-2 rounded-full border border-brick-600/30 bg-brick-500 px-4 py-2 shadow-md md:inline-flex">
-                <Sparkles size={14} className="text-cream-50" />
-                <span className="text-xs font-medium text-cream-50">
-                  Flipping the Works
-                </span>
-              </div>
+            </div>
+
+            {/* Floating top badge */}
+            <div className="absolute -top-4 left-4 z-10 hidden items-center gap-2 rounded-full border border-brick-600/30 bg-brick-500 px-4 py-2 shadow-md md:inline-flex">
+              <Sparkles size={14} className="text-cream-50" />
+              <span className="text-xs font-medium text-cream-50">
+                Flipping the Works
+              </span>
             </div>
 
             {/* Four supporting images */}
