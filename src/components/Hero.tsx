@@ -24,7 +24,7 @@ export default function Hero() {
                 Your
               </span>
               <span className="relative" style={{ color: "#5F8E9B" }}>
-                a
+                A
                 <span
                   aria-hidden="true"
                   className="pointer-events-none absolute left-1/2 top-[65%] h-[3px] w-[140%] -translate-x-1/2 -translate-y-1/2 -rotate-[18deg] rounded-full"
@@ -33,7 +33,9 @@ export default function Hero() {
               </span>
             </span>
             <br />
-            Better Business.
+            <span style={{ color: "#8E5A63" }}>Better</span>
+            <br />
+            <span style={{ color: "#5F8E9B" }}>Business.</span>
           </h1>
 
           <p className="mt-6 max-w-xl border-l-2 border-brick-500 pl-4 text-lg leading-relaxed text-ink-soft">
@@ -56,10 +58,21 @@ export default function Hero() {
 
           <div className="mt-6 h-[2px] w-full rounded-full bg-brick-500 lg:-mr-4" />
 
-          <p className="mt-8 max-w-xl border-l-2 border-brick-500 pl-4 text-lg leading-relaxed text-ink-soft">
-            Join Conversations and initiatives for Small Business Entrepreneurs
-            in Africa.
-          </p>
+          <ul className="mt-8 max-w-xl space-y-4 text-lg leading-relaxed text-ink-soft border-l-2 border-brick-500 pl-4">
+            <li className="flex gap-3">
+              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: "#8E5A63" }} />
+              <span>
+                Join Conversations and initiatives for Small Business Entrepreneurs
+                in Africa.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: "#8E5A63" }} />
+              <span>
+                Finding and implementing better practices for my business.
+              </span>
+            </li>
+          </ul>
 
           <div className="mt-4">
             <a

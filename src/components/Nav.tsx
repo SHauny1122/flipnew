@@ -44,9 +44,12 @@ export default function Nav() {
               </span>
               <span className="text-ink">.</span>
               <span style={{ color: "#4F79A8" }}>WORKS</span>
+              <span className="ml-1 text-[9px] font-medium tracking-wide text-ink-soft sm:text-[10px]">
+                PTY Ltd.
+              </span>
             </span>
-            <span className="-mt-1.5 self-end pr-2 text-[9px] font-medium tracking-wide text-ink-soft sm:text-[10px]">
-              PTY Ltd.
+            <span className="-mt-1 self-end mr-10 text-xs font-medium text-ink">
+              Consulting
             </span>
           </span>
         </a>
