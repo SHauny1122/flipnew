@@ -1,8 +1,10 @@
 import Image from "next/image";
 import {
+  ArrowRight,
   Handshake,
   Target,
   HeartHandshake,
+  ShieldCheck,
   HelpCircle,
   Workflow,
   Users,
@@ -164,6 +166,160 @@ export default function About() {
           <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-brick-500">
             monthly fee benefits
           </p>
+        </div>
+
+        {/* NSBC Platinum benefits section */}
+        <div className="mt-10 rounded-3xl border border-ink/5 bg-cream-50/70 p-6 lg:p-10">
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center rounded-full bg-brick-500 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-cream-50">
+                NSBC Platinum Membership
+              </div>
+
+              <h3 className="mt-5 font-display text-4xl leading-tight text-ink lg:text-5xl">
+                What You Get with
+                <br />
+                <span style={{ color: "#82a590" }}>NSBC Platinum</span>
+              </h3>
+
+              <p className="mt-5 max-w-xl border-l-2 border-brick-500 pl-4 text-lg leading-relaxed text-ink-soft">
+                Powerful benefits, exclusive access and real opportunities to
+                help your business grow, connect and thrive.
+              </p>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                {[
+                  {
+                    icon: Users,
+                    topic: "Topic One",
+                    detail:
+                      "Detailed popup content for this card will appear here once final copy is provided.",
+                  },
+                  {
+                    icon: Handshake,
+                    topic: "Topic Two",
+                    detail:
+                      "Detailed popup content for this card will appear here once final copy is provided.",
+                  },
+                  {
+                    icon: Compass,
+                    topic: "Topic Three",
+                    detail:
+                      "Detailed popup content for this card will appear here once final copy is provided.",
+                  },
+                  {
+                    icon: Gauge,
+                    topic: "Topic Four",
+                    detail:
+                      "Detailed popup content for this card will appear here once final copy is provided.",
+                  },
+                  {
+                    icon: Workflow,
+                    topic: "Topic Five",
+                    detail:
+                      "Detailed popup content for this card will appear here once final copy is provided.",
+                  },
+                  {
+                    icon: Layers,
+                    topic: "Topic Six",
+                    detail:
+                      "Detailed popup content for this card will appear here once final copy is provided.",
+                  },
+                  {
+                    icon: HeartHandshake,
+                    topic: "Topic Seven",
+                    detail:
+                      "Detailed popup content for this card will appear here once final copy is provided.",
+                  },
+                  {
+                    icon: Target,
+                    topic: "Topic Eight",
+                    detail:
+                      "Detailed popup content for this card will appear here once final copy is provided.",
+                  },
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={i}
+                      className="group relative min-h-[170px] rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
+                    >
+                      <div className="flex flex-col items-center text-center">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-blue-50 text-sage-500">
+                          <Icon size={24} />
+                        </div>
+                        <p className="mt-3 font-display text-2xl text-ink">{item.topic}</p>
+                      </div>
+
+                      <div className="pointer-events-none absolute left-1/2 bottom-full z-20 mb-3 w-60 -translate-x-1/2 translate-y-1 rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-y-0 group-hover:opacity-100">
+                        {item.detail}
+                      </div>
+
+                      <div className="absolute bottom-4 left-1/2 h-px w-10 -translate-x-1/2 bg-brick-500" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative">
+                <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-ink/10">
+                  <Image
+                    src="/brand/imag5.png"
+                    alt="NSBC membership workspace"
+                    width={900}
+                    height={1100}
+                    className="h-[520px] w-full object-cover"
+                  />
+                </div>
+
+                <div className="absolute -bottom-7 right-4 w-64 min-h-[160px] -translate-x-[30%] translate-y-1/2 rounded-2xl border border-ink/10 bg-white p-6 shadow-xl">
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brick-500/10 text-brick-500">
+                      <ShieldCheck size={20} />
+                    </div>
+                    <div>
+                      <p className="font-display text-2xl text-ink">Trusted Platform</p>
+                      <p className="mt-1 whitespace-nowrap text-sm text-ink-soft">Backed by NSBC Africa.</p>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+                    A network built for growth, opportunity and impact.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-2xl border border-ink/10 bg-cream-50 px-5 py-4 lg:px-8">
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+              <div className="flex items-center gap-4 lg:gap-6">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-ink/10 bg-white text-center shadow-sm">
+                  <span className="text-[9px] font-semibold uppercase tracking-wider text-ink-soft">
+                    NSBC
+                    <br />
+                    Platinum
+                    <br />
+                    Member
+                  </span>
+                </div>
+
+                <div>
+                  <p className="font-display text-3xl text-ink">All this for less than R330 a month.</p>
+                  <p className="mt-1 text-lg text-ink-soft">Join thousands of entrepreneurs already growing with NSBC.</p>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brick-500 px-6 py-4 text-base font-semibold text-cream-50 shadow-sm transition hover:bg-brick-600 lg:min-w-[320px]"
+              >
+                Learn More About Platinum Membership
+                <ArrowRight size={18} />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* The Problems We Flip */}
