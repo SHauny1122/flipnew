@@ -92,36 +92,6 @@ export default function About() {
           })}
         </div>
 
-        {/* NSBC image + long text card */}
-        <div className="mt-12 grid gap-6 lg:grid-cols-12">
-          <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-4">
-            <div className="relative h-full min-h-[220px]">
-              <Image
-                src="/brand/1772550369227.jpg"
-                alt="NSBC Platinum Membership"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm lg:col-span-8 lg:p-8">
-            <p className="text-lg leading-relaxed text-ink-soft">
-              FlipWorks advocate for Small and Medium Enterprises and in
-              support of our beliefs we would encourage all SME businesses to
-              join an efficient membership solution.
-            </p>
-
-            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              FlipWorks became an official NSBC licensee for their membership
-              and engages with SMEs to join the NSBC Platinum Membership.
-            </p>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="mt-12 h-[2px] w-full rounded-full bg-brick-500" />
-
         {/* Question / Argument block */}
         <div className="mt-12 rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-slate-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-blue-700">
@@ -152,6 +122,36 @@ export default function About() {
             </li>
           </ul>
         </div>
+
+        {/* NSBC image + long text card */}
+        <div className="mt-12 grid gap-6 lg:grid-cols-12">
+          <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-4">
+            <div className="relative h-full min-h-[220px]">
+              <Image
+                src="/brand/1772550369227.jpg"
+                alt="NSBC Platinum Membership"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm lg:col-span-8 lg:p-8">
+            <p className="text-lg leading-relaxed text-ink-soft">
+              FlipWorks advocate for Small and Medium Enterprises and in
+              support of our beliefs we would encourage all SME businesses to
+              join an efficient membership solution.
+            </p>
+
+            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+              FlipWorks became an official NSBC licensee for their membership
+              and engages with SMEs to join the NSBC Platinum Membership.
+            </p>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="mt-12 h-[2px] w-full rounded-full bg-brick-500" />
 
         {/* WHAT can be BETTER callout */}
         <div className="mt-8 max-w-3xl rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm">
@@ -191,9 +191,9 @@ export default function About() {
                 {[
                   {
                     icon: Users,
-                    topic: "Topic One",
+                    topic: "SAVE MONEY",
                     detail:
-                      "Detailed popup content for this card will appear here once final copy is provided.",
+                      "Unlock amazing exclusive offerings from top local and global brands throughout the year. These incredible offers are your key to saving big while enjoying premium products and services",
                   },
                   {
                     icon: Handshake,
@@ -244,14 +244,44 @@ export default function About() {
                       key={i}
                       className="group relative min-h-[170px] rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
                     >
-                      <div className="flex flex-col items-center text-center">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-blue-50 text-sage-500">
-                          <Icon size={24} />
+                      <div className="relative flex flex-col items-center text-center">
+                        <div
+                          className={
+                            i === 0
+                              ? "pointer-events-none absolute left-1/2 top-0 flex h-28 w-28 -translate-x-1/2 -translate-y-2 items-center justify-center"
+                              : "flex h-12 w-12 items-center justify-center rounded-full bg-slate-blue-50 text-sage-500"
+                          }
+                        >
+                          {i === 0 ? (
+                            <Image
+                              src="/brand/ChatGPT Image May 21, 2026, 12_56_32 PM.png"
+                              alt="Save money icon"
+                              width={112}
+                              height={112}
+                              className="h-28 w-28 object-contain"
+                            />
+                          ) : (
+                            <Icon size={24} />
+                          )}
                         </div>
-                        <p className="mt-3 font-display text-2xl text-ink">{item.topic}</p>
+                        <p
+                          className={
+                            i === 0
+                              ? "mt-[92px] font-display text-2xl"
+                              : "mt-3 font-display text-2xl"
+                          }
+                          style={{ color: i === 0 ? "#4F79A8" : "#1f2a36" }}
+                        >
+                          {item.topic}
+                        </p>
                       </div>
 
                       <div className="pointer-events-none absolute left-1/2 bottom-full z-20 mb-3 w-60 -translate-x-1/2 translate-y-1 rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-y-0 group-hover:opacity-100">
+                        {i === 0 && (
+                          <p className="mb-2 font-semibold" style={{ color: "#4F79A8" }}>
+                            Exclusive High Value Deals and massive discounts
+                          </p>
+                        )}
                         {item.detail}
                       </div>
 
