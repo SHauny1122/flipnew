@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Question from "./Question";
 import {
   ArrowRight,
   Handshake,
@@ -35,126 +36,130 @@ const pillars = [
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-cream-100 py-24 lg:py-32">
-      <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
-        <div className="max-w-2xl">
-          <span className="text-2xl font-semibold uppercase tracking-[0.2em] text-brick-500">
-            About
-          </span>
-          <h2 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
-            FlipWorks Consulting
-          </h2>
-          <p className="mt-5 border-l-2 border-brick-500 pl-5 text-lg italic leading-relaxed text-ink-soft">
-            &ldquo;The Consulting partner where we are working together, Flipping
-            the Works and Designing a Better Business!&rdquo;
-          </p>
-        </div>
-
-        {/* Consulting five points */}
-        <div className="mt-12 grid gap-6 md:grid-cols-3 lg:grid-cols-5">
-          {[
-            {
-              icon: HeartHandshake,
-              text: "the partner for small and medium businesses, igniting new possibilities to make your business better.",
-            },
-            {
-              icon: Target,
-              text: "affordable, accessible and practical results-oriented consulting, aligned with limited budgets, time and internal resources.",
-            },
-            {
-              icon: Handshake,
-              text: "consulting is designed and tailored by which your business can thrive, grow and evolve in the face of uncertainty and constant challenges.",
-            },
-            {
-              icon: Sparkles,
-              text: "We fuse strategic design, human-centered thinking, and rigorous business strategy to create businesses that are more innovative, resilient, and future-ready.",
-            },
-            {
-              icon: Lightbulb,
-              text: "We teamed up with IT Works to explore opportunities in AI and engage with Small and Medium Enterprises (SMEs) where AI adoption can create improvement in the works of the businesses.",
-            },
-          ].map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={i}
-                className="group relative rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-blue-50 text-slate-blue-600">
-                  <Icon size={20} />
-                </div>
-                <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-                  {item.text}
-                </p>
-                <div className="absolute inset-x-6 bottom-0 h-px origin-left scale-x-0 bg-brick-500 transition group-hover:scale-x-100" />
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Question / Argument block */}
-        <div className="mt-12 rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-slate-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-blue-700">
-            <HelpCircle size={14} />
-            Question? / Argument
+    <>
+      <section id="about" className="relative bg-cream-100 py-24 lg:py-32">
+        <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
+          <div className="max-w-2xl">
+            <span className="text-2xl font-semibold uppercase tracking-[0.2em] text-brick-500">
+              About
+            </span>
+            <h2 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
+              FlipWorks Consulting
+            </h2>
+            <p className="mt-5 border-l-2 border-brick-500 pl-5 text-lg italic leading-relaxed text-ink-soft">
+              &ldquo;The Consulting partner where we are working together, Flipping
+              the Works and Designing a Better Business!&rdquo;
+            </p>
           </div>
 
-          <h3 className="mt-5 max-w-4xl font-display text-4xl leading-tight text-ink lg:text-5xl">
-            The world around you &ndash; and your business &ndash; is filled
-            with <span className="italic" style={{ color: "#82a590" }}>uncertainty</span>.
-          </h3>
+          {/* Consulting five points */}
+          <div className="mt-12 grid gap-6 md:grid-cols-3 lg:grid-cols-5">
+            {[
+              {
+                icon: HeartHandshake,
+                text: "the partner for small and medium businesses, igniting new possibilities to make your business better.",
+              },
+              {
+                icon: Target,
+                text: "affordable, accessible and practical results-oriented consulting, aligned with limited budgets, time and internal resources.",
+              },
+              {
+                icon: Handshake,
+                text: "consulting is designed and tailored by which your business can thrive, grow and evolve in the face of uncertainty and constant challenges.",
+              },
+              {
+                icon: Sparkles,
+                text: "We fuse strategic design, human-centered thinking, and rigorous business strategy to create businesses that are more innovative, resilient, and future-ready.",
+              },
+              {
+                icon: Lightbulb,
+                text: "We teamed up with IT Works to explore opportunities in AI and engage with Small and Medium Enterprises (SMEs) where AI adoption can create improvement in the works of the businesses.",
+              },
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={i}
+                  className="group relative rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-blue-50 text-slate-blue-600">
+                    <Icon size={20} />
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+                    {item.text}
+                  </p>
+                  <div className="absolute inset-x-6 bottom-0 h-px origin-left scale-x-0 bg-brick-500 transition group-hover:scale-x-100" />
+                </div>
+              );
+            })}
+          </div>
 
-          <ul className="mt-8 max-w-4xl space-y-4 text-base leading-relaxed text-ink-soft">
-            <li className="flex gap-3">
-              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-              But within that uncertainty exist innumerable opportunities to
-              design or (re) design, game changing businesses.
-            </li>
-            <li className="flex gap-3">
-              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-              These opportunities are there for the taking.
-            </li>
-            <li className="flex gap-3">
-              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-              As such, better businesses are the ones that approach problems
-              in a different, systematic way, turning problem situations into
-              opportunities.
-            </li>
-          </ul>
-        </div>
+          {/* Question / Argument block */}
+          <div className="mt-12 rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-12">
+            <div className="inline-flex items-center gap-2 rounded-full bg-slate-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-blue-700">
+              <HelpCircle size={14} />
+              Question? / Argument
+            </div>
 
-        {/* NSBC image + long text card */}
-        <div className="mt-12 grid gap-6 lg:grid-cols-12">
-          <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-4">
-            <div className="relative h-full min-h-[220px]">
-              <Image
-                src="/brand/1772550369227.jpg"
-                alt="NSBC Platinum Membership"
-                fill
-                className="object-cover"
-              />
+            <h3 className="mt-5 max-w-4xl font-display text-4xl leading-tight text-ink lg:text-5xl">
+              The world around you &ndash; and your business &ndash; is filled
+              with <span className="italic" style={{ color: "#82a590" }}>uncertainty</span>.
+            </h3>
+
+            <ul className="mt-8 max-w-4xl space-y-4 text-base leading-relaxed text-ink-soft">
+              <li className="flex gap-3">
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
+                But within that uncertainty exist innumerable opportunities to
+                design or (re) design, game changing businesses.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
+                These opportunities are there for the taking.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
+                As such, better businesses are the ones that approach problems
+                in a different, systematic way, turning problem situations into
+                opportunities.
+              </li>
+            </ul>
+          </div>
+
+          {/* NSBC image + long text card */}
+          <div className="mt-12 grid gap-6 lg:grid-cols-12">
+            <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-4">
+              <div className="relative h-full min-h-[220px]">
+                <Image
+                  src="/brand/1772550369227.jpg"
+                  alt="NSBC Platinum Membership"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm lg:col-span-8 lg:p-8">
+              <p className="text-lg leading-relaxed text-ink-soft">
+                FlipWorks advocate for Small and Medium Enterprises and in
+                support of our beliefs we would encourage all SME businesses to
+                join an efficient membership solution.
+              </p>
+
+              <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+                FlipWorks became an official NSBC licensee for their membership
+                and engages with SMEs to join the NSBC Platinum Membership.
+              </p>
             </div>
           </div>
-
-          <div className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm lg:col-span-8 lg:p-8">
-            <p className="text-lg leading-relaxed text-ink-soft">
-              FlipWorks advocate for Small and Medium Enterprises and in
-              support of our beliefs we would encourage all SME businesses to
-              join an efficient membership solution.
-            </p>
-
-            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              FlipWorks became an official NSBC licensee for their membership
-              and engages with SMEs to join the NSBC Platinum Membership.
-            </p>
-          </div>
         </div>
+      </section>
 
-        {/* Divider */}
-        <div className="mt-12 h-[2px] w-full rounded-full bg-brick-500" />
+      <Question />
 
-        {/* WHAT can be BETTER callout */}
-        <div className="mt-8 max-w-3xl rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm">
+      <section className="relative bg-cream-100 pb-24 lg:pb-32">
+        <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
+          {/* WHAT can be BETTER callout */}
+        <div className="mt-12 max-w-3xl rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm">
           <p className="font-display text-2xl text-ink">
             WHAT can be BETTER in MY BUSINESS?
           </p>
@@ -169,7 +174,7 @@ export default function About() {
         </div>
 
         {/* NSBC Platinum benefits section */}
-        <div className="mt-10 rounded-3xl border border-ink/5 bg-cream-50/70 p-6 lg:p-10">
+        <div className="mt-8 rounded-3xl border border-ink/5 bg-cream-50/70 p-6 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center rounded-full bg-brick-500 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-cream-50">
@@ -242,41 +247,55 @@ export default function About() {
                   return (
                     <div
                       key={i}
-                      className="group relative min-h-[170px] rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
+                      className={
+                        i === 0
+                          ? "group relative min-h-[180px] rounded-xl border border-ink/10 bg-white shadow-sm sm:col-span-2"
+                          : "group relative min-h-[170px] rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
+                      }
                     >
-                      <div className="relative flex flex-col items-center text-center">
-                        <div
-                          className={
-                            i === 0
-                              ? "pointer-events-none absolute left-1/2 top-0 flex h-28 w-28 -translate-x-1/2 -translate-y-2 items-center justify-center"
-                              : "flex h-12 w-12 items-center justify-center rounded-full bg-slate-blue-50 text-sage-500"
-                          }
-                        >
-                          {i === 0 ? (
+                      {i === 0 ? (
+                        <div className="grid min-h-[180px] grid-cols-[minmax(128px,44%)_1fr] overflow-hidden rounded-xl">
+                          <div className="relative min-h-[180px]">
                             <Image
-                              src="/brand/ChatGPT Image May 21, 2026, 12_56_32 PM.png"
-                              alt="Save money icon"
-                              width={112}
-                              height={112}
-                              className="h-28 w-28 object-contain"
+                              src="/brand/specialoffer.png"
+                              alt="Special offer"
+                              fill
+                              sizes="(min-width: 1024px) 180px, 45vw"
+                              className="object-cover"
                             />
-                          ) : (
-                            <Icon size={24} />
-                          )}
-                        </div>
-                        <p
-                          className={
-                            i === 0
-                              ? "mt-[92px] font-display text-2xl"
-                              : "mt-3 font-display text-2xl"
-                          }
-                          style={{ color: i === 0 ? "#4F79A8" : "#1f2a36" }}
-                        >
-                          {item.topic}
-                        </p>
-                      </div>
+                          </div>
 
-                      <div className="pointer-events-none absolute left-1/2 bottom-full z-20 mb-3 w-60 -translate-x-1/2 translate-y-1 rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-y-0 group-hover:opacity-100">
+                          <div className="grid grid-rows-2">
+                            <div className="flex items-center justify-center border-b border-ink/15 px-4 py-4 text-center">
+                              <p
+                                className="text-base font-bold italic leading-tight"
+                                style={{ color: "#4F79A8" }}
+                              >
+                                SAVE MONEY
+                              </p>
+                            </div>
+
+                            <div className="relative flex items-center justify-center px-4 py-4 pb-7 text-center">
+                              <p className="text-sm leading-snug text-slate-blue-700">
+                                Exclusive, High-value Deals and Massive
+                                Discounts
+                              </p>
+                              <div className="absolute bottom-4 left-1/2 h-px w-10 -translate-x-1/2 bg-brick-500" />
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="relative flex flex-col items-center text-center">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-blue-50 text-sage-500">
+                            <Icon size={24} />
+                          </div>
+                          <p className="mt-3 font-display text-2xl text-ink">
+                            {item.topic}
+                          </p>
+                        </div>
+                      )}
+
+                      <div className="pointer-events-none absolute right-3 top-3 z-30 w-60 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100">
                         {i === 0 && (
                           <p className="mb-2 font-semibold" style={{ color: "#4F79A8" }}>
                             Exclusive High Value Deals and massive discounts
@@ -285,7 +304,9 @@ export default function About() {
                         {item.detail}
                       </div>
 
-                      <div className="absolute bottom-4 left-1/2 h-px w-10 -translate-x-1/2 bg-brick-500" />
+                      {i !== 0 && (
+                        <div className="absolute bottom-4 left-1/2 h-px w-10 -translate-x-1/2 bg-brick-500" />
+                      )}
                     </div>
                   );
                 })}
@@ -408,6 +429,7 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
