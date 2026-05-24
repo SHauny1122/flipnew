@@ -18,8 +18,9 @@ export default function Home() {
         <About />
         <Spiral />
         <Vision />
-        <WhyChoose />
+        <WhyChoose showValues showWhyChoose={false} />
         <Approach />
+        <WhyChoose showValues={false} showWhyChoose />
         <Projects />
         <Contact />
       </main>
