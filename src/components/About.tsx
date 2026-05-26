@@ -192,76 +192,149 @@ export default function About() {
                 help your business grow, connect and thrive.
               </p>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {[
                   {
                     icon: Users,
+                    topic: "VIP BENEFITS",
+                    detail:
+                      "This card includes three dedicated benefit popups that will be added next.",
+                    boxes: [
+                      {
+                        title: "VIP Lounge",
+                        detail:
+                          "Get FREE access to connect and collaborate with a powerful network of highly successful entrepreneurs, business leaders, and industry experts.",
+                      },
+                      {
+                        title: "Seminars & Masterclasses",
+                        detail:
+                          "Gain FREE access to top-of-the-line masterclasses and seminars led by the most respected business gurus. Learn cutting-edge strategies, proven techniques, and powerful insights designed to give you the competitive edge you need to scale your business and achieve unparalleled success.",
+                      },
+                      {
+                        title: "R5000 Voucher to Exhibit",
+                        detail:
+                          "Unlock an immediate R5000 discount voucher to exhibit at Africa's largest and most powerful business event - an unparalleled lead-generation opportunity. You gain exclusive access to a highly subsidised package, giving you the ultimate platform to showcase your business and attract high-value connections.",
+                      },
+                    ],
+                  },
+                  {
+                    icon: Handshake,
+                    topic: "RECEIVE RECOGNITION",
+                    subtopic: "Nomination for Prestigious Recognition",
+                    image: "/brand/newnew2.png",
+                    detail:
+                      "You'll receive a prestigious nomination, putting you in the running for the ultimate recognition every business owner and entrepreneur strives for. This is your springboard to accelerated business success and visibility. You and your business are automatically qualified for entry - the recognition you deserve is within your reach.",
+                  },
+                  {
+                    icon: Compass,
+                    topic: "BOOST BUSINESS VISIBILITY",
+                    subtopic: "Boost your Google ranking fast",
+                    image: "/brand/newnew3.png",
+                    detail:
+                      "You'll receive a highly visible digital profile on Search Engine Gateway (SEG), powered by Google, putting your business front and centre.",
+                  },
+                  {
+                    icon: Gauge,
+                    topic: "NETWORK & CONNECT",
+                    subtopic: "Supercharge Your Business Network",
+                    image: "/brand/newnew4.png",
+                    detail:
+                      "• Accelerate the growth of your business network with priority, ongoing VIP invites to this world-renowned B2B breakfast networking event.\n• Rub shoulders with industry leaders, gain insights from inspirational top speakers, and\n• unlock unmatched networking opportunities that can propel your business forward.",
+                  },
+                  {
+                    icon: Workflow,
+                    topic: "LEARN & GROW",
+                    subtopic: "Self-Education is Your Path to Fortune",
+                    image: "/brand/newnew5.png",
+                    detail:
+                      "Unleash your business potential with exclusive access to the comprehensive Build a Business Academy.\n• Gain instant access to hundreds of downloadable 'how to' guides to better your business.",
+                  },
+                  {
+                    icon: Layers,
                     topic: "SAVE MONEY",
+                    subtopic: "Exclusive, High-value Deals and Massive Discounts",
+                    image: "/brand/specialoffer.png",
                     detail:
                       "Unlock amazing exclusive offerings from top local and global brands throughout the year. These incredible offers are your key to saving big while enjoying premium products and services",
                   },
                   {
-                    icon: Handshake,
-                    topic: "Topic Two",
-                    detail:
-                      "Detailed popup content for this card will appear here once final copy is provided.",
-                  },
-                  {
-                    icon: Compass,
-                    topic: "Topic Three",
-                    detail:
-                      "Detailed popup content for this card will appear here once final copy is provided.",
-                  },
-                  {
-                    icon: Gauge,
-                    topic: "Topic Four",
-                    detail:
-                      "Detailed popup content for this card will appear here once final copy is provided.",
-                  },
-                  {
-                    icon: Workflow,
-                    topic: "Topic Five",
-                    detail:
-                      "Detailed popup content for this card will appear here once final copy is provided.",
-                  },
-                  {
-                    icon: Layers,
-                    topic: "Topic Six",
-                    detail:
-                      "Detailed popup content for this card will appear here once final copy is provided.",
-                  },
-                  {
                     icon: HeartHandshake,
-                    topic: "Topic Seven",
+                    topic: "ENHANCE CREDIBILITY",
+                    subtopic: "Elevating your Credibility to New Heights",
+                    image: "/brand/newnew7.png",
                     detail:
-                      "Detailed popup content for this card will appear here once final copy is provided.",
+                      "A digital Platinum Membership badge on your website, email signature and social media pages, signals huge credibility. It boosts online presence significantly, increases visibility, attracts customers, and builds trust - highlighting your business as part of an exclusive, reputable network and organisation.",
                   },
                   {
                     icon: Target,
-                    topic: "Topic Eight",
+                    topic: "ACCESS TO FUNDING",
+                    subtopic:
+                      "Gain Access to Over 300 Funders and Over 600 Funding Products",
+                    image: "/brand/newnew8.png",
                     detail:
-                      "Detailed popup content for this card will appear here once final copy is provided.",
+                      "As a Platinum Member get exclusive access to South Africa's most powerful Funding Matching Service.\n• Stop chasing funding. Become positioned for it.\n• Funding moves to the prepared and the connected.",
                   },
                 ].map((item, i) => {
                   const Icon = item.icon;
+                  const isFirstCard = i === 0;
+                  const isSplitCard = !isFirstCard && Boolean(item.image && item.subtopic);
+                  const isSaveMoneyCard = item.topic === "SAVE MONEY";
                   return (
                     <div
                       key={i}
                       className={
-                        i === 0
-                          ? "group relative min-h-[180px] rounded-xl border border-ink/10 bg-white shadow-sm sm:col-span-2"
+                        isFirstCard
+                          ? "group relative min-h-[204px] rounded-xl border border-ink/10 bg-white shadow-sm"
+                          : isSplitCard
+                            ? "group relative min-h-[180px] rounded-xl border border-ink/10 bg-white shadow-sm"
                           : "group relative min-h-[170px] rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
                       }
                     >
-                      {i === 0 ? (
+                      {isFirstCard ? (
+                        <div className="grid min-h-[204px] grid-cols-[minmax(128px,44%)_1fr] rounded-xl">
+                          <div className="relative min-h-[204px] overflow-hidden rounded-l-xl">
+                            <Image
+                              src="/brand/newnew1.png"
+                              alt="VIP benefits"
+                              fill
+                              sizes="(min-width: 1024px) 180px, 45vw"
+                              className="object-fill"
+                            />
+                          </div>
+
+                          <div className="grid grid-rows-3">
+                            {item.boxes?.map((box, boxIndex) => (
+                              <div
+                                key={box.title}
+                                className={`group/box relative flex items-center justify-center px-4 py-3 text-center ${boxIndex < 2 ? "border-b border-ink/15" : "pb-7"}`}
+                              >
+                                <p
+                                  className="text-sm font-semibold leading-tight"
+                                  style={{ color: "#4F79A8" }}
+                                >
+                                  {box.title}
+                                </p>
+
+                                <div className="pointer-events-none absolute right-2 top-2 z-30 w-56 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover/box:translate-x-4 group-hover/box:-translate-y-4 group-hover/box:opacity-100">
+                                  {box.detail}
+                                </div>
+
+                                {boxIndex === 2 && (
+                                  <div className="absolute bottom-4 left-1/2 h-px w-10 -translate-x-1/2 bg-brick-500" />
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : isSplitCard ? (
                         <div className="grid min-h-[180px] grid-cols-[minmax(128px,44%)_1fr] overflow-hidden rounded-xl">
                           <div className="relative min-h-[180px]">
                             <Image
-                              src="/brand/specialoffer.png"
-                              alt="Special offer"
+                              src={item.image ?? "/brand/specialoffer.png"}
+                              alt={item.topic}
                               fill
                               sizes="(min-width: 1024px) 180px, 45vw"
-                              className="object-cover"
+                              className={isSaveMoneyCard ? "object-cover" : "object-fill"}
                             />
                           </div>
 
@@ -271,14 +344,13 @@ export default function About() {
                                 className="text-base font-bold italic leading-tight"
                                 style={{ color: "#4F79A8" }}
                               >
-                                SAVE MONEY
+                                {item.topic}
                               </p>
                             </div>
 
                             <div className="relative flex items-center justify-center px-4 py-4 pb-7 text-center">
                               <p className="text-sm leading-snug text-slate-blue-700">
-                                Exclusive, High-value Deals and Massive
-                                Discounts
+                                {item.subtopic}
                               </p>
                               <div className="absolute bottom-4 left-1/2 h-px w-10 -translate-x-1/2 bg-brick-500" />
                             </div>
@@ -289,22 +361,27 @@ export default function About() {
                           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-blue-50 text-sage-500">
                             <Icon size={24} />
                           </div>
-                          <p className="mt-3 font-display text-2xl text-ink">
+                          <p
+                            className={`mt-3 font-display text-2xl ${isSaveMoneyCard ? "font-bold italic" : ""}`}
+                            style={{ color: isSaveMoneyCard ? "#4F79A8" : "#1f2a36" }}
+                          >
                             {item.topic}
                           </p>
                         </div>
                       )}
 
-                      <div className="pointer-events-none absolute right-3 top-3 z-30 w-60 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100">
-                        {i === 0 && (
+                      {!isFirstCard && (
+                        <div className="pointer-events-none absolute right-3 top-3 z-30 w-60 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100">
+                          {isSaveMoneyCard && (
                           <p className="mb-2 font-semibold" style={{ color: "#4F79A8" }}>
                             Exclusive High Value Deals and massive discounts
                           </p>
-                        )}
-                        {item.detail}
-                      </div>
+                          )}
+                          {item.detail}
+                        </div>
+                      )}
 
-                      {i !== 0 && (
+                      {!isFirstCard && !isSplitCard && (
                         <div className="absolute bottom-4 left-1/2 h-px w-10 -translate-x-1/2 bg-brick-500" />
                       )}
                     </div>
