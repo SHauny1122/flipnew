@@ -3,7 +3,7 @@ import { Award } from "lucide-react";
 
 export default function Question() {
   return (
-    <section id="nsbc" className="relative bg-slate-blue-800 py-24 text-cream-50 lg:py-32">
+    <section id="nsbc" className="relative py-24 text-cream-50 lg:py-32" style={{ backgroundColor: "#5F8E9B" }}>
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
         <div className="mb-14 max-w-3xl">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brick-400">

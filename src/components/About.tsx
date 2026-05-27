@@ -192,11 +192,12 @@ export default function About() {
                 help your business grow, connect and thrive.
               </p>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-2">
                 {[
                   {
                     icon: Users,
                     topic: "VIP BENEFITS",
+                    bg: "#f5efe0",
                     detail:
                       "This card includes three dedicated benefit popups that will be added next.",
                     boxes: [
@@ -222,6 +223,7 @@ export default function About() {
                     topic: "RECEIVE RECOGNITION",
                     subtopic: "Nomination for Prestigious Recognition",
                     image: "/brand/newnew2.png",
+                    bg: "#f5e9d3",
                     detail:
                       "You'll receive a prestigious nomination, putting you in the running for the ultimate recognition every business owner and entrepreneur strives for. This is your springboard to accelerated business success and visibility. You and your business are automatically qualified for entry - the recognition you deserve is within your reach.",
                   },
@@ -230,6 +232,7 @@ export default function About() {
                     topic: "BOOST BUSINESS VISIBILITY",
                     subtopic: "Boost your Google ranking fast",
                     image: "/brand/newnew3.png",
+                    bg: "#ece6da",
                     detail:
                       "You'll receive a highly visible digital profile on Search Engine Gateway (SEG), powered by Google, putting your business front and centre.",
                   },
@@ -238,6 +241,7 @@ export default function About() {
                     topic: "NETWORK & CONNECT",
                     subtopic: "Supercharge Your Business Network",
                     image: "/brand/newnew4.png",
+                    bg: "#ece6da",
                     detail:
                       "• Accelerate the growth of your business network with priority, ongoing VIP invites to this world-renowned B2B breakfast networking event.\n• Rub shoulders with industry leaders, gain insights from inspirational top speakers, and\n• unlock unmatched networking opportunities that can propel your business forward.",
                   },
@@ -246,6 +250,7 @@ export default function About() {
                     topic: "LEARN & GROW",
                     subtopic: "Self-Education is Your Path to Fortune",
                     image: "/brand/newnew5.png",
+                    bg: "#ece6da",
                     detail:
                       "Unleash your business potential with exclusive access to the comprehensive Build a Business Academy.\n• Gain instant access to hundreds of downloadable 'how to' guides to better your business.",
                   },
@@ -254,6 +259,7 @@ export default function About() {
                     topic: "SAVE MONEY",
                     subtopic: "Exclusive, High-value Deals and Massive Discounts",
                     image: "/brand/specialoffer.png",
+                    bg: "#5b8a8c",
                     detail:
                       "Unlock amazing exclusive offerings from top local and global brands throughout the year. These incredible offers are your key to saving big while enjoying premium products and services",
                   },
@@ -262,6 +268,7 @@ export default function About() {
                     topic: "ENHANCE CREDIBILITY",
                     subtopic: "Elevating your Credibility to New Heights",
                     image: "/brand/newnew7.png",
+                    bg: "#ece6da",
                     detail:
                       "A digital Platinum Membership badge on your website, email signature and social media pages, signals huge credibility. It boosts online presence significantly, increases visibility, attracts customers, and builds trust - highlighting your business as part of an exclusive, reputable network and organisation.",
                   },
@@ -271,6 +278,7 @@ export default function About() {
                     subtopic:
                       "Gain Access to Over 300 Funders and Over 600 Funding Products",
                     image: "/brand/newnew8.png",
+                    bg: "#6b2c3a",
                     detail:
                       "As a Platinum Member get exclusive access to South Africa's most powerful Funding Matching Service.\n• Stop chasing funding. Become positioned for it.\n• Funding moves to the prepared and the connected.",
                   },
@@ -278,6 +286,9 @@ export default function About() {
                   const Icon = item.icon;
                   const isFirstCard = i === 0;
                   const isSplitCard = !isFirstCard && Boolean(item.image && item.subtopic);
+                  const isRecognitionCard = item.topic === "RECEIVE RECOGNITION";
+                  const isCredibilityCard = item.topic === "ENHANCE CREDIBILITY";
+                  const isAdjustedCard = isRecognitionCard || isCredibilityCard;
                   const isSaveMoneyCard = item.topic === "SAVE MONEY";
                   return (
                     <div
@@ -285,20 +296,23 @@ export default function About() {
                       className={
                         isFirstCard
                           ? "group relative min-h-[204px] rounded-xl border border-ink/10 bg-white shadow-sm"
+                          : isAdjustedCard
+                            ? "group relative min-h-[196px] rounded-xl border border-ink/10 bg-white shadow-sm"
                           : isSplitCard
                             ? "group relative min-h-[180px] rounded-xl border border-ink/10 bg-white shadow-sm"
                           : "group relative min-h-[170px] rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
                       }
                     >
                       {isFirstCard ? (
-                        <div className="grid min-h-[204px] grid-cols-[minmax(128px,44%)_1fr] rounded-xl">
-                          <div className="relative min-h-[204px] overflow-hidden rounded-l-xl">
+                        <div className="grid min-h-[204px] grid-cols-[minmax(110px,40%)_1fr] items-stretch overflow-hidden rounded-xl sm:grid-cols-[minmax(128px,44%)_1fr]">
+                          <div className="relative flex h-full min-h-[204px] items-center justify-center self-stretch overflow-hidden rounded-l-xl bg-cream-100 p-4">
                             <Image
                               src="/brand/newnew1.png"
                               alt="VIP benefits"
-                              fill
+                              width={400}
+                              height={300}
                               sizes="(min-width: 1024px) 180px, 45vw"
-                              className="object-fill"
+                              className="h-auto max-h-full w-auto max-w-full object-contain"
                             />
                           </div>
 
@@ -327,14 +341,15 @@ export default function About() {
                           </div>
                         </div>
                       ) : isSplitCard ? (
-                        <div className="grid min-h-[180px] grid-cols-[minmax(128px,44%)_1fr] overflow-hidden rounded-xl">
-                          <div className="relative min-h-[180px]">
+                        <div className={`grid h-full ${isAdjustedCard ? "min-h-[196px]" : "min-h-[180px]"} grid-cols-[minmax(110px,40%)_1fr] items-stretch overflow-hidden rounded-xl sm:grid-cols-[minmax(128px,44%)_1fr]`}>
+                          <div className="relative flex h-full items-center justify-center self-stretch overflow-hidden bg-cream-100 p-4">
                             <Image
                               src={item.image ?? "/brand/specialoffer.png"}
                               alt={item.topic}
-                              fill
+                              width={400}
+                              height={300}
                               sizes="(min-width: 1024px) 180px, 45vw"
-                              className={isSaveMoneyCard ? "object-cover" : "object-fill"}
+                              className="h-auto max-h-full w-auto max-w-full object-contain"
                             />
                           </div>
 
@@ -402,7 +417,7 @@ export default function About() {
                   />
                 </div>
 
-                <div className="absolute -bottom-7 right-4 w-64 min-h-[160px] -translate-x-[30%] translate-y-1/2 rounded-2xl border border-ink/10 bg-white p-6 shadow-xl">
+                <div className="mt-6 w-full rounded-2xl border border-ink/10 bg-white p-6 shadow-xl lg:absolute lg:-bottom-7 lg:right-4 lg:mt-0 lg:w-64 lg:min-h-[160px] lg:-translate-x-[30%] lg:translate-y-1/2">
                   <div className="flex items-start gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brick-500/10 text-brick-500">
                       <ShieldCheck size={20} />
