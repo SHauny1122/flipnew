@@ -258,7 +258,7 @@ export default function About() {
                     icon: Layers,
                     topic: "SAVE MONEY",
                     subtopic: "Exclusive, High-value Deals and Massive Discounts",
-                    image: "/brand/specialoffer.png",
+                    image: "/brand/specialoffernew.png",
                     bg: "#5b8a8c",
                     detail:
                       "Unlock amazing exclusive offerings from top local and global brands throughout the year. These incredible offers are your key to saving big while enjoying premium products and services",
@@ -277,7 +277,7 @@ export default function About() {
                     topic: "ACCESS TO FUNDING",
                     subtopic:
                       "Gain Access to Over 300 Funders and Over 600 Funding Products",
-                    image: "/brand/newnew8.png",
+                    image: "/brand/financenew.png",
                     bg: "#6b2c3a",
                     detail:
                       "As a Platinum Member get exclusive access to South Africa's most powerful Funding Matching Service.\n• Stop chasing funding. Become positioned for it.\n• Funding moves to the prepared and the connected.",
