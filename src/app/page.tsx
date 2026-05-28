@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import QuestionArgument from "@/components/QuestionArgument";
 import About from "@/components/About";
 import Spiral from "@/components/Spiral";
 import Vision from "@/components/Vision";
@@ -15,6 +16,7 @@ export default function Home() {
       <Nav />
       <main className="flex-1">
         <Hero />
+        <QuestionArgument />
         <About />
         <Spiral />
         <Vision />

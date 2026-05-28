@@ -6,7 +6,6 @@ import {
   Target,
   HeartHandshake,
   ShieldCheck,
-  HelpCircle,
   Workflow,
   Users,
   Compass,
@@ -94,37 +93,6 @@ export default function About() {
             })}
           </div>
 
-          {/* Question / Argument block */}
-          <div className="mt-12 rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-12">
-            <div className="inline-flex items-center gap-2 rounded-full bg-slate-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-blue-700">
-              <HelpCircle size={14} />
-              Question? / Argument
-            </div>
-
-            <h3 className="mt-5 max-w-4xl font-display text-4xl leading-tight text-ink lg:text-5xl">
-              The world around you &ndash; and your business &ndash; is filled
-              with <span className="italic" style={{ color: "#82a590" }}>uncertainty</span>.
-            </h3>
-
-            <ul className="mt-8 max-w-4xl space-y-4 text-base leading-relaxed text-ink-soft">
-              <li className="flex gap-3">
-                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-                But within that uncertainty exist innumerable opportunities to
-                design or (re) design, game changing businesses.
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-                These opportunities are there for the taking.
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-                As such, better businesses are the ones that approach problems
-                in a different, systematic way, turning problem situations into
-                opportunities.
-              </li>
-            </ul>
-          </div>
-
           {/* NSBC image + long text card */}
           <div className="mt-12 grid gap-6 lg:grid-cols-12">
             <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-4">
@@ -158,21 +126,6 @@ export default function About() {
 
       <section className="relative bg-cream-100 pb-24 lg:pb-32">
         <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
-          {/* WHAT can be BETTER callout */}
-        <div className="mt-12 max-w-3xl rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm">
-          <p className="font-display text-2xl text-ink">
-            WHAT can be BETTER in MY BUSINESS?
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            START and Join Conversations and initiatives for Small Business
-            Entrepreneurs in South Africa and Africa. Become a Platinum
-            Member of the most comprehensive platform of its kind available.
-          </p>
-          <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-brick-500">
-            monthly fee benefits
-          </p>
-        </div>
-
         {/* NSBC Platinum benefits section */}
         <div className="mt-8 rounded-3xl border border-ink/5 bg-cream-50/70 p-6 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
