@@ -38,17 +38,28 @@ export default function About() {
     <>
       <section id="about" className="relative bg-cream-100 py-24 lg:py-32">
         <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
-          <div className="max-w-2xl">
-            <span className="text-2xl font-semibold uppercase tracking-[0.2em] text-brick-500">
-              About
-            </span>
-            <h2 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
-              FlipWorks Consulting
-            </h2>
-            <p className="mt-5 border-l-2 border-brick-500 pl-5 text-lg italic leading-relaxed text-ink-soft">
-              &ldquo;The Consulting partner where we are working together, Flipping
-              the Works and Designing a Better Business!&rdquo;
-            </p>
+          <div className="grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-10">
+            <div className="max-w-2xl lg:col-span-7">
+              <span className="text-2xl font-semibold uppercase tracking-[0.2em] text-brick-500">
+                About
+              </span>
+              <h2 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
+                FlipWorks Consulting
+              </h2>
+              <p className="mt-5 border-l-2 border-brick-500 pl-5 text-lg italic leading-relaxed text-ink-soft">
+                &ldquo;The Consulting partner where we are working together,
+                Flipping the Works and Designing a Better Business!&rdquo;
+              </p>
+            </div>
+
+            <div className="relative hidden h-[220px] overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-5 lg:block">
+              <Image
+                src="/brand/meetingroom.jpg"
+                alt="Meeting room"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
 
           {/* Consulting five points */}
@@ -56,22 +67,27 @@ export default function About() {
             {[
               {
                 icon: HeartHandshake,
+                heading: "partnership",
                 text: "the partner for small and medium businesses, igniting new possibilities to make your business better.",
               },
               {
                 icon: Target,
+                heading: "practical",
                 text: "affordable, accessible and practical results-oriented consulting, aligned with limited budgets, time and internal resources.",
               },
               {
                 icon: Handshake,
+                heading: "tailored",
                 text: "consulting is designed and tailored by which your business can thrive, grow and evolve in the face of uncertainty and constant challenges.",
               },
               {
                 icon: Sparkles,
+                heading: "innovative",
                 text: "We fuse strategic design, human-centered thinking, and rigorous business strategy to create businesses that are more innovative, resilient, and future-ready.",
               },
               {
                 icon: Lightbulb,
+                heading: "adopt ai",
                 text: "We teamed up with IT Works to explore opportunities in AI and engage with Small and Medium Enterprises (SMEs) where AI adoption can create improvement in the works of the businesses.",
               },
             ].map((item, i) => {
@@ -81,10 +97,15 @@ export default function About() {
                   key={i}
                   className="group relative rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
                 >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-blue-50 text-slate-blue-600">
-                    <Icon size={20} />
+                  <div className="relative flex items-center">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-blue-50 text-slate-blue-600">
+                      <Icon size={20} />
+                    </div>
+                    <p className="absolute left-1/2 -translate-x-1/2 text-center text-sm font-semibold lowercase tracking-[0.12em] text-slate-blue-700">
+                      {item.heading}
+                    </p>
                   </div>
-                  <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+                  <p className="mt-5 text-sm leading-relaxed text-ink-soft">
                     {item.text}
                   </p>
                   <div className="absolute inset-x-6 bottom-0 h-px origin-left scale-x-0 bg-brick-500 transition group-hover:scale-x-100" />
@@ -95,7 +116,7 @@ export default function About() {
 
           {/* NSBC image + long text card */}
           <div className="mt-12 grid gap-6 lg:grid-cols-12">
-            <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-4">
+            <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-3">
               <div className="relative h-full min-h-[220px]">
                 <Image
                   src="/brand/1772550369227.jpg"
@@ -106,7 +127,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm lg:col-span-8 lg:p-8">
+            <div className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm lg:col-span-6 lg:p-8">
               <p className="text-lg leading-relaxed text-ink-soft">
                 FlipWorks advocate for Small and Medium Enterprises and in
                 support of our beliefs we would encourage all SME businesses to
@@ -117,6 +138,17 @@ export default function About() {
                 FlipWorks became an official NSBC licensee for their membership
                 and engages with SMEs to join the NSBC Platinum Membership.
               </p>
+            </div>
+
+            <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-3">
+              <div className="relative h-full min-h-[220px]">
+                <Image
+                  src="/brand/nsbcpriceupdate.png"
+                  alt="NSBC price update"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -257,7 +289,7 @@ export default function About() {
                       }
                     >
                       {isFirstCard ? (
-                        <div className="grid min-h-[204px] grid-cols-[minmax(110px,40%)_1fr] items-stretch overflow-hidden rounded-xl sm:grid-cols-[minmax(128px,44%)_1fr]">
+                        <div className="grid min-h-[204px] grid-cols-[minmax(110px,40%)_1fr] items-stretch rounded-xl sm:grid-cols-[minmax(128px,44%)_1fr]">
                           <div className="relative flex h-full min-h-[204px] items-center justify-center self-stretch overflow-hidden rounded-l-xl bg-cream-100 p-4">
                             <Image
                               src="/brand/newnew1.png"
