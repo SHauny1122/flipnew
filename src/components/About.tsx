@@ -140,14 +140,25 @@ export default function About() {
               </p>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-3">
-              <div className="relative h-full min-h-[220px]">
-                <Image
-                  src="/brand/nsbcpriceupdate.png"
-                  alt="NSBC price update"
-                  fill
-                  className="object-cover"
-                />
+            <div className="lg:col-span-3">
+              <div
+                className="relative mx-auto w-full max-w-[420px] overflow-hidden rounded-2xl"
+                style={{ aspectRatio: "1.85 / 1" }}
+              >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#0b3d91_0%,#07245f_55%,#051a47_100%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,#56bf86_0%,transparent_36%),radial-gradient(circle_at_top_left,#f5d34f_0%,transparent_28%)]" />
+
+                <div className="relative flex h-full flex-col items-center justify-center px-8 py-6 text-center sm:px-10">
+                  <p className="max-w-[26ch] text-xs font-semibold leading-relaxed text-[#F4D65B] sm:text-sm">
+                    Stop operating alone. Start scaling with power
+                  </p>
+                  <p className="mt-3 text-4xl font-bold italic leading-none text-white sm:text-5xl">
+                    R995.00
+                  </p>
+                  <p className="mt-2 text-sm font-semibold uppercase tracking-[0.03em] text-white sm:text-base">
+                    PER YEAR | Excl. VAT
+                  </p>
+                </div>
               </div>
             </div>
           </div>
