@@ -52,9 +52,9 @@ export default function About() {
               </p>
             </div>
 
-            <div className="relative hidden h-[220px] overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-5 lg:block">
+            <div className="relative hidden h-[220px] overflow-hidden rounded-2xl border border-ink/10 shadow-sm lg:col-span-5 lg:block">
               <Image
-                src="/brand/meetingroom.jpg"
+                src="/brand/austin-distel-mpN7xjKQ_Ns-unsplash.jpg"
                 alt="Meeting room"
                 fill
                 className="object-cover"
