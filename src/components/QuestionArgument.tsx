@@ -8,7 +8,7 @@ export default function QuestionArgument() {
     >
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
         <div className="mb-10 max-w-4xl">
-          <span className="text-2xl font-semibold uppercase tracking-[0.2em] text-brick-500">
+          <span className="text-2xl font-semibold uppercase tracking-[0.2em] text-ink">
             Question? / Argument
           </span>
           <h2 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
@@ -16,9 +16,9 @@ export default function QuestionArgument() {
           </h2>
         </div>
 
-        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-10">
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_40rem] lg:items-start lg:gap-10">
           <div>
-            <div className="rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-12">
+            <div className="rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:max-w-[59rem] lg:p-12">
               <h3 className="max-w-4xl font-display text-4xl leading-tight text-ink lg:text-5xl">
                 The world around you &ndash; and your business &ndash; is filled
                 with <span className="italic" style={{ color: "#82a590" }}>uncertainty</span>.
@@ -43,7 +43,19 @@ export default function QuestionArgument() {
               </ul>
             </div>
 
-            <div className="mt-12 max-w-3xl rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm">
+            <div className="mt-8 rounded-2xl border border-brick-300 bg-white p-8 text-center shadow-sm lg:max-w-[59rem] lg:p-10">
+              <h4 className="text-2xl font-semibold uppercase text-ink">
+                the mandate for continuous re-invention
+              </h4>
+              <p className="mt-6 text-2xl leading-relaxed text-ink-soft">
+                &ldquo;(Re-) Designing a business is generally considered not a
+                usual thing. We are trying to see it differently. It must be
+                built into our DNA, this idea that we haven&rsquo;t got it right
+                yet &ndash; our business design.&rdquo;
+              </p>
+            </div>
+
+            <div className="mt-12 rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm lg:max-w-[59rem]">
               <p className="font-display text-2xl text-ink">
                 WHAT can be BETTER in MY BUSINESS?
               </p>
@@ -58,13 +70,13 @@ export default function QuestionArgument() {
             </div>
           </div>
 
-          <div className="relative mt-8 h-[30rem] overflow-hidden rounded-2xl shadow-sm lg:mt-0 lg:h-[36rem]">
+          <div className="relative mt-8 h-[34rem] overflow-hidden rounded-2xl shadow-sm lg:-mt-36 lg:h-[46rem]">
             <Image
               src="/brand/question mark .png"
               alt="Question mark visual"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 22rem"
+              sizes="(max-width: 1024px) 100vw, 32rem"
             />
           </div>
         </div>

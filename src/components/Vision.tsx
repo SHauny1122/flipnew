@@ -31,17 +31,17 @@ export default function Vision() {
           {/* Vision */}
           <div className="lg:col-span-5">
             <div className="sticky top-24 rounded-3xl bg-slate-blue-700 p-10 text-cream-50 shadow-lg">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-sage-300">
+              <span className="text-base font-bold uppercase tracking-[0.2em] text-sage-300">
                 Our Vision
               </span>
-              <p className="mt-6 font-display text-3xl leading-snug lg:text-4xl">
+              <p className="mt-6 font-display text-2xl leading-snug lg:text-3xl">
                 To be involved where small and medium businesses are
                 intentionally designed to thrive, be resilient in the face of
                 challenges, innovative by nature, and deeply valued by their
                 customers, employees and communities.
               </p>
               <div className="mt-8 h-px w-16 bg-brick-400" />
-              <p className="mt-6 text-sm leading-relaxed text-cream-100/85">
+              <p className="mt-6 text-base leading-relaxed text-cream-100/85">
                 <span className="font-semibold text-cream-50">
                   Our Mission:
                 </span>{" "}

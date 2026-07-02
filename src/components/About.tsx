@@ -34,6 +34,96 @@ const pillars = [
 ];
 
 export default function About() {
+  const platinumBenefits = [
+    {
+      icon: Users,
+      topic: "VIP BENEFITS",
+      bg: "#f5efe0",
+      detail:
+        "This card includes three dedicated benefit popups that will be added next.",
+      boxes: [
+        {
+          title: "VIP Lounge",
+          detail:
+            "Get FREE access to connect and collaborate with a powerful network of highly successful entrepreneurs, business leaders, and industry experts.",
+        },
+        {
+          title: "Seminars & Masterclasses",
+          detail:
+            "Gain FREE access to top-of-the-line masterclasses and seminars led by the most respected business gurus. Learn cutting-edge strategies, proven techniques, and powerful insights designed to give you the competitive edge you need to scale your business and achieve unparalleled success.",
+        },
+        {
+          title: "R5000 Voucher to Exhibit",
+          detail:
+            "Unlock an immediate R5000 discount voucher to exhibit at Africa's largest and most powerful business event - an unparalleled lead-generation opportunity. You gain exclusive access to a highly subsidised package, giving you the ultimate platform to showcase your business and attract high-value connections.",
+        },
+      ],
+    },
+    {
+      icon: Handshake,
+      topic: "RECEIVE RECOGNITION",
+      subtopic: "Nomination for Prestigious Recognition",
+      image: "/brand/newnew2.png",
+      bg: "#f5e9d3",
+      detail:
+        "You'll receive a prestigious nomination, putting you in the running for the ultimate recognition every business owner and entrepreneur strives for. This is your springboard to accelerated business success and visibility. You and your business are automatically qualified for entry - the recognition you deserve is within your reach.",
+    },
+    {
+      icon: Compass,
+      topic: "BOOST BUSINESS VISIBILITY",
+      subtopic: "Boost your Google ranking fast",
+      image: "/brand/newnew3.png",
+      bg: "#ece6da",
+      detail:
+        "You'll receive a highly visible digital profile on Search Engine Gateway (SEG), powered by Google, putting your business front and centre.",
+    },
+    {
+      icon: Gauge,
+      topic: "NETWORK & CONNECT",
+      subtopic: "Supercharge Your Business Network",
+      image: "/brand/newnew4.png",
+      bg: "#ece6da",
+      detail:
+        "• Accelerate the growth of your business network with priority, ongoing VIP invites to this world-renowned B2B breakfast networking event.\n• Rub shoulders with industry leaders, gain insights from inspirational top speakers, and\n• unlock unmatched networking opportunities that can propel your business forward.",
+    },
+    {
+      icon: Workflow,
+      topic: "LEARN & GROW",
+      subtopic: "Self-Education is Your Path to Fortune",
+      image: "/brand/newnew5.png",
+      bg: "#ece6da",
+      detail:
+        "Unleash your business potential with exclusive access to the comprehensive Build a Business Academy.\n• Gain instant access to hundreds of downloadable 'how to' guides to better your business.",
+    },
+    {
+      icon: Layers,
+      topic: "SAVE MONEY",
+      subtopic: "Exclusive, High-value Deals and Massive Discounts",
+      image: "/brand/specialoffernew.png",
+      bg: "#5b8a8c",
+      detail:
+        "Unlock amazing exclusive offerings from top local and global brands throughout the year. These incredible offers are your key to saving big while enjoying premium products and services",
+    },
+    {
+      icon: HeartHandshake,
+      topic: "ENHANCE CREDIBILITY",
+      subtopic: "Elevating your Credibility to New Heights",
+      image: "/brand/newnew7.png",
+      bg: "#ece6da",
+      detail:
+        "A digital Platinum Membership badge on your website, email signature and social media pages, signals huge credibility. It boosts online presence significantly, increases visibility, attracts customers, and builds trust - highlighting your business as part of an exclusive, reputable network and organisation.",
+    },
+    {
+      icon: Target,
+      topic: "ACCESS TO FUNDING",
+      subtopic: "Gain Access to Over 300 Funders and Over 600 Funding Products",
+      image: "/brand/financenew.png",
+      bg: "#6b2c3a",
+      detail:
+        "As a Platinum Member get exclusive access to South Africa's most powerful Funding Matching Service.\n• Stop chasing funding. Become positioned for it.\n• Funding moves to the prepared and the connected.",
+    },
+  ];
+
   return (
     <>
       <section id="about" className="relative bg-cream-100 py-24 lg:py-32">
@@ -114,6 +204,11 @@ export default function About() {
             })}
           </div>
 
+          <div
+            className="mt-6 h-[3px] w-full rounded-full"
+            style={{ backgroundColor: "#8E5A63" }}
+          />
+
           {/* NSBC image + long text card */}
           <div className="mt-12 grid gap-6 lg:grid-cols-12">
             <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm lg:col-span-3">
@@ -189,96 +284,7 @@ export default function About() {
               </p>
 
               <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-2">
-                {[
-                  {
-                    icon: Users,
-                    topic: "VIP BENEFITS",
-                    bg: "#f5efe0",
-                    detail:
-                      "This card includes three dedicated benefit popups that will be added next.",
-                    boxes: [
-                      {
-                        title: "VIP Lounge",
-                        detail:
-                          "Get FREE access to connect and collaborate with a powerful network of highly successful entrepreneurs, business leaders, and industry experts.",
-                      },
-                      {
-                        title: "Seminars & Masterclasses",
-                        detail:
-                          "Gain FREE access to top-of-the-line masterclasses and seminars led by the most respected business gurus. Learn cutting-edge strategies, proven techniques, and powerful insights designed to give you the competitive edge you need to scale your business and achieve unparalleled success.",
-                      },
-                      {
-                        title: "R5000 Voucher to Exhibit",
-                        detail:
-                          "Unlock an immediate R5000 discount voucher to exhibit at Africa's largest and most powerful business event - an unparalleled lead-generation opportunity. You gain exclusive access to a highly subsidised package, giving you the ultimate platform to showcase your business and attract high-value connections.",
-                      },
-                    ],
-                  },
-                  {
-                    icon: Handshake,
-                    topic: "RECEIVE RECOGNITION",
-                    subtopic: "Nomination for Prestigious Recognition",
-                    image: "/brand/newnew2.png",
-                    bg: "#f5e9d3",
-                    detail:
-                      "You'll receive a prestigious nomination, putting you in the running for the ultimate recognition every business owner and entrepreneur strives for. This is your springboard to accelerated business success and visibility. You and your business are automatically qualified for entry - the recognition you deserve is within your reach.",
-                  },
-                  {
-                    icon: Compass,
-                    topic: "BOOST BUSINESS VISIBILITY",
-                    subtopic: "Boost your Google ranking fast",
-                    image: "/brand/newnew3.png",
-                    bg: "#ece6da",
-                    detail:
-                      "You'll receive a highly visible digital profile on Search Engine Gateway (SEG), powered by Google, putting your business front and centre.",
-                  },
-                  {
-                    icon: Gauge,
-                    topic: "NETWORK & CONNECT",
-                    subtopic: "Supercharge Your Business Network",
-                    image: "/brand/newnew4.png",
-                    bg: "#ece6da",
-                    detail:
-                      "• Accelerate the growth of your business network with priority, ongoing VIP invites to this world-renowned B2B breakfast networking event.\n• Rub shoulders with industry leaders, gain insights from inspirational top speakers, and\n• unlock unmatched networking opportunities that can propel your business forward.",
-                  },
-                  {
-                    icon: Workflow,
-                    topic: "LEARN & GROW",
-                    subtopic: "Self-Education is Your Path to Fortune",
-                    image: "/brand/newnew5.png",
-                    bg: "#ece6da",
-                    detail:
-                      "Unleash your business potential with exclusive access to the comprehensive Build a Business Academy.\n• Gain instant access to hundreds of downloadable 'how to' guides to better your business.",
-                  },
-                  {
-                    icon: Layers,
-                    topic: "SAVE MONEY",
-                    subtopic: "Exclusive, High-value Deals and Massive Discounts",
-                    image: "/brand/specialoffernew.png",
-                    bg: "#5b8a8c",
-                    detail:
-                      "Unlock amazing exclusive offerings from top local and global brands throughout the year. These incredible offers are your key to saving big while enjoying premium products and services",
-                  },
-                  {
-                    icon: HeartHandshake,
-                    topic: "ENHANCE CREDIBILITY",
-                    subtopic: "Elevating your Credibility to New Heights",
-                    image: "/brand/newnew7.png",
-                    bg: "#ece6da",
-                    detail:
-                      "A digital Platinum Membership badge on your website, email signature and social media pages, signals huge credibility. It boosts online presence significantly, increases visibility, attracts customers, and builds trust - highlighting your business as part of an exclusive, reputable network and organisation.",
-                  },
-                  {
-                    icon: Target,
-                    topic: "ACCESS TO FUNDING",
-                    subtopic:
-                      "Gain Access to Over 300 Funders and Over 600 Funding Products",
-                    image: "/brand/financenew.png",
-                    bg: "#6b2c3a",
-                    detail:
-                      "As a Platinum Member get exclusive access to South Africa's most powerful Funding Matching Service.\n• Stop chasing funding. Become positioned for it.\n• Funding moves to the prepared and the connected.",
-                  },
-                ].map((item, i) => {
+                {platinumBenefits.slice(0, 4).map((item, i) => {
                   const Icon = item.icon;
                   const isFirstCard = i === 0;
                   const isSplitCard = !isFirstCard && Boolean(item.image && item.subtopic);
@@ -428,7 +434,54 @@ export default function About() {
                   </p>
                 </div>
               </div>
+
             </div>
+          </div>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {platinumBenefits.slice(4).map((item) => {
+              const isCredibilityCard = item.topic === "ENHANCE CREDIBILITY";
+              return (
+                <div
+                  key={item.topic}
+                  className={`group relative ${isCredibilityCard ? "min-h-[196px]" : "min-h-[180px]"} rounded-xl border border-ink/10 bg-white shadow-sm`}
+                >
+                  <div
+                    className={`grid h-full ${isCredibilityCard ? "min-h-[196px]" : "min-h-[180px]"} grid-cols-[minmax(110px,40%)_1fr] items-stretch overflow-hidden rounded-xl sm:grid-cols-[minmax(128px,44%)_1fr]`}
+                  >
+                    <div className="relative flex h-full items-center justify-center self-stretch overflow-hidden bg-cream-100 p-4">
+                      <Image
+                        src={item.image ?? "/brand/specialoffer.png"}
+                        alt={item.topic}
+                        width={400}
+                        height={300}
+                        sizes="(min-width: 1024px) 180px, 45vw"
+                        className="h-auto max-h-full w-auto max-w-full object-contain"
+                      />
+                    </div>
+
+                    <div className="grid grid-rows-2">
+                      <div className="flex items-center justify-center border-b border-ink/15 px-4 py-4 text-center">
+                        <p className="text-base font-bold italic leading-tight" style={{ color: "#4F79A8" }}>
+                          {item.topic}
+                        </p>
+                      </div>
+
+                      <div className="relative flex items-center justify-center px-4 py-4 pb-7 text-center">
+                        <p className="text-sm leading-snug text-slate-blue-700">
+                          {item.subtopic}
+                        </p>
+                        <div className="absolute bottom-4 left-1/2 h-px w-10 -translate-x-1/2 bg-brick-500" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pointer-events-none absolute right-3 top-3 z-30 w-60 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100">
+                    {item.detail}
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <div className="mt-10 rounded-2xl border border-ink/10 bg-cream-50 px-5 py-4 lg:px-8">
@@ -445,7 +498,7 @@ export default function About() {
                 </div>
 
                 <div>
-                  <p className="font-display text-3xl text-ink">All this for less than R330 a month.</p>
+                  <p className="font-display text-3xl text-ink">All this for less than R995.00 a year.</p>
                   <p className="mt-1 text-lg text-ink-soft">Join thousands of entrepreneurs already growing with NSBC.</p>
                 </div>
               </div>
