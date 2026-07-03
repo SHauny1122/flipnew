@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Users, Pencil, Mountain, Globe2 } from "lucide-react";
 
 const principles = [
@@ -27,62 +28,78 @@ export default function Vision() {
   return (
     <section id="services" className="relative bg-sage-100/60 py-24 lg:py-32">
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
           {/* Vision */}
-          <div className="lg:col-span-5">
-            <div className="sticky top-24 rounded-3xl bg-slate-blue-700 p-10 text-cream-50 shadow-lg">
+          <div className="lg:col-span-4">
+            <div className="sticky top-24 flex flex-col justify-between rounded-3xl bg-slate-blue-700 p-10 text-cream-50 shadow-lg lg:min-h-[54rem]">
               <span className="text-base font-bold uppercase tracking-[0.2em] text-sage-300">
                 Our Vision
               </span>
-              <p className="mt-6 font-display text-2xl leading-snug lg:text-3xl">
+              <p className="mt-6 font-display text-3xl leading-snug lg:text-4xl">
                 To be involved where small and medium businesses are
                 intentionally designed to thrive, be resilient in the face of
                 challenges, innovative by nature, and deeply valued by their
-                customers, employees and communities.
+                customers, employees <span className="whitespace-nowrap">and communities.</span>
               </p>
               <div className="mt-8 h-px w-16 bg-brick-400" />
-              <p className="mt-6 text-base leading-relaxed text-cream-100/85">
-                <span className="font-semibold text-cream-50">
-                  Our Mission:
-                </span>{" "}
-                To become a trusted partner for SMEs growth, creating a future
-                where there is access to tailored, practical tools,
-                conversations, knowledge and information for businesses to
-                become better on any playing field.
-              </p>
+              <div className="mt-6">
+                <h4 className="font-display text-3xl text-cream-50 lg:text-4xl">
+                  Our Mission
+                </h4>
+                <p className="mt-4 text-2xl leading-relaxed text-cream-100/90">
+                  To become a trusted partner for SMEs growth, creating a future
+                  where there is access to tailored, practical tools,
+                  conversations, knowledge and information for businesses to
+                  become better on any playing field.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Why Principles */}
-          <div className="lg:col-span-7">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
-              Our &ldquo;WHY&rdquo; Principles
-            </span>
-            <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
-              What we stand on.
-            </h3>
+          <div className="lg:col-span-8 lg:grid lg:grid-cols-[minmax(0,34rem)_minmax(0,1fr)] lg:gap-8">
+            <div className="lg:max-w-[34rem]">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
+                Our &ldquo;WHY&rdquo; Principles
+              </span>
+              <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
+                What we stand on.
+              </h3>
 
-            <div className="mt-10 grid gap-5 sm:grid-cols-2">
-              {principles.map((p, i) => {
-                const Icon = p.icon;
-                return (
-                  <div
-                    key={i}
-                    className="group relative overflow-hidden rounded-2xl border border-ink/10 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-                  >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sage-100 text-sage-600">
-                      <Icon size={20} />
+              <div className="mt-10 flex flex-col gap-5 lg:min-h-[54rem]">
+                {principles.map((p, i) => {
+                  const Icon = p.icon;
+                  return (
+                    <div
+                      key={i}
+                      className="group relative flex-1 overflow-hidden rounded-2xl border border-ink/10 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                    >
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sage-100 text-sage-600">
+                        <Icon size={20} />
+                      </div>
+                      <h4 className="mt-5 font-display text-xl text-ink">
+                        {p.title}
+                      </h4>
+                      <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                        {p.body}
+                      </p>
+                      <div className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 bg-slate-blue-500 transition group-hover:scale-x-100" />
                     </div>
-                    <h4 className="mt-5 font-display text-xl text-ink">
-                      {p.title}
-                    </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                      {p.body}
-                    </p>
-                    <div className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 bg-slate-blue-500 transition group-hover:scale-x-100" />
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="hidden lg:block">
+              <div className="sticky top-24 h-[54rem] overflow-hidden rounded-3xl shadow-lg ring-1 ring-ink/10">
+                <Image
+                  src="/brand/purpose image.png"
+                  alt="Purpose visual"
+                  fill
+                  className="object-cover grayscale"
+                  sizes="(min-width: 1024px) 28vw, 100vw"
+                />
+              </div>
             </div>
           </div>
         </div>

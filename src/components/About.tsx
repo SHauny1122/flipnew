@@ -283,7 +283,7 @@ export default function About() {
                 help your business grow, connect and thrive.
               </p>
 
-              <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-2">
+              <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-[repeat(2,minmax(0,24rem))] lg:justify-start">
                 {platinumBenefits.slice(0, 4).map((item, i) => {
                   const Icon = item.icon;
                   const isFirstCard = i === 0;
@@ -408,14 +408,14 @@ export default function About() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative">
-                <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-ink/10">
+              <div className="relative lg:h-[520px]">
+                <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-ink/10 lg:absolute lg:right-0 lg:top-0 lg:h-[560px] lg:w-[calc(100%+4rem)]">
                   <Image
                     src="/brand/imag5.png"
                     alt="NSBC membership workspace"
                     width={900}
                     height={1100}
-                    className="h-[520px] w-full object-cover"
+                    className="h-[520px] w-full object-cover lg:h-[560px]"
                   />
                 </div>
 
@@ -440,14 +440,13 @@ export default function About() {
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {platinumBenefits.slice(4).map((item) => {
-              const isCredibilityCard = item.topic === "ENHANCE CREDIBILITY";
               return (
                 <div
                   key={item.topic}
-                  className={`group relative ${isCredibilityCard ? "min-h-[196px]" : "min-h-[180px]"} rounded-xl border border-ink/10 bg-white shadow-sm`}
+                  className="group relative min-h-[180px] rounded-xl border border-ink/10 bg-white shadow-sm"
                 >
                   <div
-                    className={`grid h-full ${isCredibilityCard ? "min-h-[196px]" : "min-h-[180px]"} grid-cols-[minmax(110px,40%)_1fr] items-stretch overflow-hidden rounded-xl sm:grid-cols-[minmax(128px,44%)_1fr]`}
+                    className="grid h-full min-h-[180px] grid-cols-[minmax(110px,40%)_1fr] items-stretch overflow-hidden rounded-xl sm:grid-cols-[minmax(128px,44%)_1fr]"
                   >
                     <div className="relative flex h-full items-center justify-center self-stretch overflow-hidden bg-cream-100 p-4">
                       <Image
