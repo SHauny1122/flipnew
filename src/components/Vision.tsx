@@ -28,10 +28,10 @@ export default function Vision() {
   return (
     <section id="services" className="relative bg-sage-100/60 py-24 lg:py-32">
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-stretch">
           {/* Vision */}
           <div className="lg:col-span-4">
-            <div className="sticky top-24 flex flex-col justify-between rounded-3xl bg-slate-blue-700 p-10 text-cream-50 shadow-lg lg:min-h-[54rem]">
+            <div className="flex flex-col justify-between rounded-3xl bg-slate-blue-700 p-10 text-cream-50 shadow-lg lg:h-full lg:min-h-[54rem]">
               <span className="text-base font-bold uppercase tracking-[0.2em] text-sage-300">
                 Our Vision
               </span>
@@ -91,7 +91,7 @@ export default function Vision() {
             </div>
 
             <div className="hidden lg:block">
-              <div className="sticky top-24 h-[54rem] overflow-hidden rounded-3xl shadow-lg ring-1 ring-ink/10">
+              <div className="relative h-full min-h-[54rem] overflow-hidden rounded-3xl shadow-lg ring-1 ring-ink/10">
                 <Image
                   src="/brand/purpose image.png"
                   alt="Purpose visual"

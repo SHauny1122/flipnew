@@ -70,7 +70,7 @@ export default function QuestionArgument() {
             </div>
           </div>
 
-          <div className="relative mt-8 h-[34rem] overflow-hidden rounded-2xl shadow-sm lg:-mt-36 lg:h-[64rem]">
+          <div className="relative mt-8 h-[34rem] overflow-hidden rounded-2xl shadow-sm lg:-mt-36 lg:h-auto lg:self-stretch">
             <Image
               src="/brand/question mark .png"
               alt="Question mark visual"

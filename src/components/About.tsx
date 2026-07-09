@@ -409,7 +409,7 @@ export default function About() {
 
             <div className="lg:col-span-5">
               <div className="relative lg:h-[520px]">
-                <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-ink/10 lg:absolute lg:right-0 lg:top-0 lg:h-[560px] lg:w-[calc(100%+4rem)]">
+                <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-ink/10 lg:absolute lg:right-0 lg:top-0 lg:h-[560px] lg:w-full">
                   <Image
                     src="/brand/imag5.png"
                     alt="NSBC membership workspace"
