@@ -72,17 +72,22 @@ export default function Vision() {
                   return (
                     <div
                       key={i}
-                      className="group relative flex-1 overflow-hidden rounded-2xl border border-ink/10 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                      className="group relative flex flex-1 items-center gap-6 overflow-hidden rounded-2xl border border-ink/10 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
                     >
-                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sage-100 text-sage-600">
-                        <Icon size={20} />
+                      <span className="pointer-events-none absolute -right-2 -top-6 font-display text-[7rem] leading-none text-sage-100 transition group-hover:text-sage-200">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-sage-100 text-sage-600 transition group-hover:bg-slate-blue-700 group-hover:text-cream-50">
+                        <Icon size={24} />
                       </div>
-                      <h4 className="mt-5 font-display text-xl text-ink">
-                        {p.title}
-                      </h4>
-                      <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                        {p.body}
-                      </p>
+                      <div className="relative">
+                        <h4 className="font-display text-xl text-ink">
+                          {p.title}
+                        </h4>
+                        <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                          {p.body}
+                        </p>
+                      </div>
                       <div className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 bg-slate-blue-500 transition group-hover:scale-x-100" />
                     </div>
                   );
