@@ -11,7 +11,7 @@ export default function Spiral() {
   ];
 
   return (
-    <section className="relative bg-slate-blue-50/60 py-24 lg:py-28">
+    <section className="relative bg-cream-100 py-24 lg:py-28">
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-5">

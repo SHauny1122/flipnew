@@ -262,7 +262,7 @@ export default function About() {
 
       <Question />
 
-      <section className="relative bg-cream-100 pb-24 lg:pb-32">
+      <section className="relative bg-slate-blue-50/60 pb-24 lg:pb-32">
         <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
         {/* NSBC Platinum benefits section */}
         <div className="mt-8 rounded-3xl border border-ink/5 bg-cream-50/70 p-6 lg:p-10">

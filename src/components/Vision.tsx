@@ -26,7 +26,7 @@ const principles = [
 
 export default function Vision() {
   return (
-    <section id="services" className="relative bg-sage-100/60 py-24 lg:py-32">
+    <section id="services" className="relative py-24 lg:py-32" style={{ backgroundColor: "#8E5A63" }}>
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-stretch">
           {/* Vision */}
@@ -59,7 +59,7 @@ export default function Vision() {
           {/* Why Principles */}
           <div className="lg:col-span-8 lg:grid lg:grid-cols-[minmax(0,34rem)_minmax(0,1fr)] lg:gap-8">
             <div className="lg:max-w-[34rem]">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black">
                 Our &ldquo;WHY&rdquo; Principles
               </span>
               <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
