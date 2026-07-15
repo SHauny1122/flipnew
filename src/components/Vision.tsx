@@ -1,26 +1,36 @@
 import Image from "next/image";
-import { Users, Pencil, Mountain, Globe2 } from "lucide-react";
+import { HandHeart, Eye, UsersRound, BookOpenCheck, Wrench, Gem } from "lucide-react";
 
 const principles = [
   {
-    icon: Users,
-    title: "People-Centred:",
-    body: "People create lasting value.",
+    icon: HandHeart,
+    title: "APPROACHABILITY",
+    body: "We speak straight plain language, being responsive, jargon-free, and to the point.",
   },
   {
-    icon: Pencil,
-    title: "Design-Led Improvement:",
-    body: "We believe businesses are designed and not merely managed.",
+    icon: Eye,
+    title: "OPENESS",
+    body: "We only recommend what you truly need.",
   },
   {
-    icon: Mountain,
-    title: "Strength in Complexity:",
-    body: "Economic volatility, regulatory changes, infrastructure challenges, and competitive pressures demand more than generic advice.",
+    icon: UsersRound,
+    title: "PARTNERING",
+    body: "We are in this with you because relationships matter beyond the initial project",
   },
   {
-    icon: Globe2,
-    title: "Sustainable National Impact:",
-    body: "By helping SMEs getting better we contribute to job creation, economic growth, and a more competitive national economy.",
+    icon: BookOpenCheck,
+    title: "UNDERSTANDING",
+    body: "For us understanding builds deeper connections than pure expertise.",
+  },
+  {
+    icon: Wrench,
+    title: "PRACTICALITY",
+    body: "We deliver actionable solutions that work in the real world.",
+  },
+  {
+    icon: Gem,
+    title: "VALUE CREATION",
+    body: "Every recommendation must solve the issue or create other opportunities.",
   },
 ];
 
@@ -33,24 +43,24 @@ export default function Vision() {
           <div className="lg:col-span-4">
             <div className="flex flex-col justify-between rounded-3xl bg-slate-blue-700 p-10 text-cream-50 shadow-lg lg:h-full lg:min-h-[54rem]">
               <span className="text-base font-bold uppercase tracking-[0.2em] text-sage-300">
-                Our Vision
+                Our Mission
               </span>
               <p className="mt-6 font-display text-3xl leading-snug lg:text-4xl">
-                To be involved where small and medium businesses are
-                intentionally designed to thrive, be resilient in the face of
-                challenges, innovative by nature, and deeply valued by their
-                customers, employees <span className="whitespace-nowrap">and communities.</span>
+                To become a trusted partner for SMEs growth, creating a future
+                where there is access to tailored, practical tools,
+                conversations, knowledge and information for businesses to
+                become better on any playing field.
               </p>
               <div className="mt-8 h-px w-16 bg-brick-400" />
               <div className="mt-6">
                 <h4 className="font-display text-3xl text-cream-50 lg:text-4xl">
-                  Our Mission
+                  Our Vision
                 </h4>
                 <p className="mt-4 text-2xl leading-relaxed text-cream-100/90">
-                  To become a trusted partner for SMEs growth, creating a future
-                  where there is access to tailored, practical tools,
-                  conversations, knowledge and information for businesses to
-                  become better on any playing field.
+                  To be involved where small and medium businesses are
+                  intentionally designed to thrive, be resilient in the face of
+                  challenges, innovative by nature, and deeply valued by their
+                  customers, employees <span className="whitespace-nowrap">and communities.</span>
                 </p>
               </div>
             </div>
@@ -59,12 +69,14 @@ export default function Vision() {
           {/* Why Principles */}
           <div className="lg:col-span-8 lg:grid lg:grid-cols-[minmax(0,34rem)_minmax(0,1fr)] lg:gap-8">
             <div className="lg:max-w-[34rem]">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black">
-                Our &ldquo;WHY&rdquo; Principles
-              </span>
-              <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
-                What we stand on.
-              </h3>
+              <div className="text-center">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black">
+                  We Value
+                </span>
+                <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
+                  Principles that guide every engagement.
+                </h3>
+              </div>
 
               <div className="mt-10 flex flex-col gap-5 lg:min-h-[54rem]">
                 {principles.map((p, i) => {
