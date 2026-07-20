@@ -513,6 +513,67 @@ export default function About() {
           </div>
         </div>
 
+        {/* The Problem We Solve */}
+        <div className="mt-24">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
+            <div className="lg:col-span-5">
+              <div className="flex gap-5">
+                <div className="w-1.5 shrink-0 self-stretch rounded-full bg-brick-500" />
+                <h3 className="font-display text-4xl leading-tight text-ink lg:text-5xl">
+                  The Problem
+                  <br />
+                  We Solve
+                </h3>
+              </div>
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
+                the mandate for continuous re-invention
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+                &ldquo;(Re-) Designing a business is generally considered not a
+                usual thing. We&rsquo;re trying to see it differently. It must
+                be built into our DNA, this idea that we haven&rsquo;t got it
+                right yet &ndash; our business design.&rdquo;
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-3">
+              {[
+                { title: "Problem One", body: "Short description of the first problem goes here." },
+                { title: "Problem Two", body: "Short description of the second problem goes here." },
+                { title: "Problem Three", body: "Short description of the third problem goes here." },
+                { title: "Problem Four", body: "Short description of the fourth problem goes here." },
+                { title: "Problem Five", body: "Short description of the fifth problem goes here." },
+                { title: "Problem Six", body: "Short description of the sixth problem goes here." },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-brick-500 font-display text-base text-brick-500">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-ink">
+                    {item.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative mt-10 h-56 w-full overflow-hidden rounded-2xl shadow-sm lg:h-72">
+            <Image
+              src="/brand/campaign-creators-gMsnXqILjp4-unsplash.jpg"
+              alt="Team collaborating around a laptop"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+        </div>
+
         {/* The Problems We Flip */}
         <div className="mt-24 grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
