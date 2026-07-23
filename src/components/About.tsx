@@ -513,7 +513,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* The Problem We Solve */}
+        {/* The Problem We Solve - mandate */}
         <div className="mt-24">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
             <div className="lg:col-span-5">
@@ -525,25 +525,79 @@ export default function About() {
                   We Solve
                 </h3>
               </div>
-              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
-                the mandate for continuous re-invention
+              <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+                <span className="font-semibold text-brick-500">FLIP</span>{" "}
+                those factors that will affect your business overall
+                performance and continued success.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-                &ldquo;(Re-) Designing a business is generally considered not a
-                usual thing. We&rsquo;re trying to see it differently. It must
-                be built into our DNA, this idea that we haven&rsquo;t got it
-                right yet &ndash; our business design.&rdquo;
+              <p className="mt-4 text-lg font-semibold leading-relaxed text-ink">
+                Does your business design enable:
+              </p>
+              <ul className="mt-3 space-y-2 text-base leading-relaxed text-ink-soft">
+                <li className="flex gap-3">
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
+                  Your business strategy implementation, and
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
+                  <span>
+                    the rapid identification of those{" "}
+                    <span className="font-semibold text-ink">
+                      VITAL FACTORS
+                    </span>{" "}
+                    that will affect the overall
+                  </span>
+                </li>
+              </ul>
+              <ul className="mt-3 space-y-1 pl-8 text-base leading-relaxed text-ink-soft">
+                <li>performance,</li>
+                <li>competitiveness and</li>
+                <li>future success</li>
+              </ul>
+              <p className="mt-3 text-base leading-relaxed text-ink-soft">
+                of your business?
               </p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-4">
               {[
-                { title: "Problem One", body: "Short description of the first problem goes here." },
-                { title: "Problem Two", body: "Short description of the second problem goes here." },
-                { title: "Problem Three", body: "Short description of the third problem goes here." },
-                { title: "Problem Four", body: "Short description of the fourth problem goes here." },
-                { title: "Problem Five", body: "Short description of the fifth problem goes here." },
-                { title: "Problem Six", body: "Short description of the sixth problem goes here." },
+                {
+                  title: "Rapid Identification",
+                  body: "Rapid identification of problems involving vital factors that affect business performance, competitiveness, and future success.",
+                },
+                {
+                  title: "Business Opportunities",
+                  body: "Business and entrepreneurial opportunities.",
+                },
+                {
+                  title: "Resource Utilisation",
+                  body: "Effective resource utilisation:",
+                  bullets: ["People", "Equipment", "Continuous improvement", "Cheaper, better, faster"],
+                },
+                {
+                  title: "Efficient Ways of Working",
+                  body: "Efficient ways of working:",
+                  bullets: ["Processes", "Interactions", "Systems", "Structures"],
+                },
+                {
+                  title: "People Engagement",
+                  body: "People engagement:",
+                  bullets: ["Alignment", "Engagement", "Culture", "HR services"],
+                },
+                {
+                  title: "Focused People and Energy",
+                  body: "Focused people and energy:",
+                  bullets: ["Competence", "Managing", "First-line leaders", "Clear roles"],
+                },
+                {
+                  title: "Meaningful Experiences",
+                  body: "Creation of meaningful experiences for:",
+                  bullets: ["Customers", "Employees", "Suppliers"],
+                },
+                {
+                  title: "Competitive Benchmarking",
+                  body: "Continuous access to competitive benchmarking information and opportunities to search for and implement best practices in the current SME landscape.",
+                },
               ].map((item, i) => (
                 <div
                   key={i}
@@ -558,6 +612,16 @@ export default function About() {
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                     {item.body}
                   </p>
+                  {item.bullets && (
+                    <ul className="mt-2 space-y-1 text-sm leading-relaxed text-ink-soft">
+                      {item.bullets.map((b) => (
+                        <li key={b} className="flex gap-2">
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brick-500" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>
@@ -629,6 +693,116 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        {/* Problems To Solve */}
+        <div className="mt-24">
+          <div className="flex gap-5">
+            <div className="w-1.5 shrink-0 self-stretch rounded-full bg-brick-500" />
+            <h3 className="font-display text-4xl leading-tight text-ink lg:text-5xl">
+              Problems To Solve
+            </h3>
+          </div>
+
+          <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:items-center">
+            {/* Green ellipse */}
+            <div className="flex justify-center lg:col-span-4">
+              <div
+                className="flex aspect-square w-full max-w-[24rem] items-center justify-center rounded-full p-10 text-center shadow-sm"
+                style={{ backgroundColor: "#82a590" }}
+              >
+                <p className="text-base leading-relaxed text-white">
+                  Many small and medium enterprises (SMEs) have promising
+                  products, services, or technical expertise, yet they operate
+                  with{" "}
+                  <span className="font-semibold italic underline">
+                    outdated, fragmented, or not fit for purpose business
+                    designs
+                  </span>
+                  .
+                </p>
+              </div>
+            </div>
+
+            {/* Arrow */}
+            <div className="flex items-center justify-center lg:col-span-3">
+              <div className="mr-1.5 hidden gap-1.5 lg:flex">
+                <div className="h-24 w-1.5 rounded-full bg-sage-300" />
+                <div className="h-24 w-1.5 rounded-full bg-sage-300" />
+              </div>
+              <div
+                className="flex min-h-[15rem] w-full max-w-[20rem] items-center justify-start"
+                style={{
+                  backgroundColor: "#dbe0c1",
+                  clipPath:
+                    "polygon(0% 22%, 62% 22%, 62% 0%, 100% 50%, 62% 100%, 62% 78%, 0% 78%)",
+                }}
+              >
+                <p className="w-[62%] px-5 text-center text-sm leading-relaxed text-ink">
+                  This issue manifests in the most common{" "}
+                  <span className="font-semibold italic underline">
+                    pain points
+                  </span>{" "}
+                  faced by SMEs.
+                  <br />
+                  (2025&ndash;2026 data)
+                </p>
+              </div>
+            </div>
+
+            {/* Bracket + bullet points */}
+            <div className="flex items-stretch gap-4 lg:col-span-5">
+              <svg
+                viewBox="0 0 32 200"
+                preserveAspectRatio="none"
+                className="w-6 shrink-0 self-stretch text-brick-500"
+                aria-hidden="true"
+              >
+                <path
+                  d="M28 4 C14 4 18 14 18 30 L18 86 C18 96 8 100 4 100 C8 100 18 104 18 114 L18 170 C18 186 14 196 28 196"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
+              </svg>
+
+              <ul className="space-y-3 py-2 text-base leading-relaxed text-ink-soft">
+                {[
+                  "High failure rates (up to 75% in the first few years)",
+                  "Difficulty becoming \u201cfunding-ready\u201d despite available capital.",
+                  "Chronic cash-flow and working-capital challenges.",
+                  "Rising operational costs and economic volatility.",
+                  "Weak market differentiation and limited innovation.",
+                  "Skills gaps in strategic planning and management.",
+                  "Difficulty to adapt quickly to regulatory changes, competition, digital shifts, and infrastructure pressures.",
+                  "Owners and teams end up trapped in reactive, day-to-day survival mode, working in the business instead of on it.",
+                ].map((point, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div
+            className="mt-10 rounded-2xl border border-ink/10 px-8 py-6 text-center shadow-sm"
+            style={{ backgroundColor: "#EFC75E" }}
+          >
+            <p className="mx-auto max-w-5xl text-base leading-relaxed text-ink">
+              In short, we solve the problem of{" "}
+              <span className="font-semibold">
+                &ldquo;good idea, badly designed business&rdquo;
+              </span>{" "}
+              &mdash; turning survivalist operations into deliberately built,
+              competitive, and scalable enterprises that thrive in South Africa
+              and Africa&rsquo;s challenging environment.
+            </p>
+          </div>
+
+        </div>
+
       </div>
       </section>
     </>
