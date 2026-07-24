@@ -525,6 +525,12 @@ export default function About() {
                   We Solve
                 </h3>
               </div>
+              <p className="mt-6 font-display text-2xl text-ink">
+                FLIP the &ldquo;BUSINESS DESIGN!&rdquo;
+              </p>
+              <p className="mt-1 text-lg text-ink-soft">
+                RE- Design your better business
+              </p>
               <p className="mt-6 text-lg leading-relaxed text-ink-soft">
                 <span className="font-semibold text-brick-500">FLIP</span>{" "}
                 those factors that will affect your business overall
@@ -559,71 +565,83 @@ export default function About() {
               </p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-4">
-              {[
-                {
-                  title: "Rapid Identification",
-                  body: "Rapid identification of problems involving vital factors that affect business performance, competitiveness, and future success.",
-                },
-                {
-                  title: "Business Opportunities",
-                  body: "Business and entrepreneurial opportunities.",
-                },
-                {
-                  title: "Resource Utilisation",
-                  body: "Effective resource utilisation:",
-                  bullets: ["People", "Equipment", "Continuous improvement", "Cheaper, better, faster"],
-                },
-                {
-                  title: "Efficient Ways of Working",
-                  body: "Efficient ways of working:",
-                  bullets: ["Processes", "Interactions", "Systems", "Structures"],
-                },
-                {
-                  title: "People Engagement",
-                  body: "People engagement:",
-                  bullets: ["Alignment", "Engagement", "Culture", "HR services"],
-                },
-                {
-                  title: "Focused People and Energy",
-                  body: "Focused people and energy:",
-                  bullets: ["Competence", "Managing", "First-line leaders", "Clear roles"],
-                },
-                {
-                  title: "Meaningful Experiences",
-                  body: "Creation of meaningful experiences for:",
-                  bullets: ["Customers", "Employees", "Suppliers"],
-                },
-                {
-                  title: "Competitive Benchmarking",
-                  body: "Continuous access to competitive benchmarking information and opportunities to search for and implement best practices in the current SME landscape.",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-brick-500 font-display text-base text-brick-500">
-                    {String(i + 1).padStart(2, "0")}
+            <div className="lg:col-span-7">
+              <div className="rounded-xl border border-ink/10 bg-white p-5 text-center shadow-sm">
+                <p className="text-sm leading-relaxed text-ink">
+                  Rapid Identification of problems with{" "}
+                  <span className="font-semibold italic underline">
+                    VITAL FACTORS
+                  </span>{" "}
+                  such as:
+                </p>
+              </div>
+
+              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  {
+                    title: "Business Opportunities",
+                    body: "Business and entrepreneurial opportunities.",
+                  },
+                  {
+                    title: "Resource Utilisation",
+                    body: "Effective resource utilisation:",
+                    bullets: ["People", "Equipment", "Continuous improvement", "Cheaper, better, faster"],
+                  },
+                  {
+                    title: "Efficient Ways of Working",
+                    body: "Efficient ways of working:",
+                    bullets: ["Processes", "Interactions", "Systems", "Structures"],
+                  },
+                  {
+                    title: "People Engagement",
+                    body: "People engagement:",
+                    bullets: ["Alignment", "Engagement", "Culture", "HR services"],
+                  },
+                  {
+                    title: "Focused People and Energy",
+                    body: "Focused people and energy:",
+                    bullets: ["Competence", "Managing", "First-line leaders", "Clear roles"],
+                  },
+                  {
+                    title: "Meaningful Experiences",
+                    body: "Creation of meaningful experiences for:",
+                    bullets: ["Customers", "Employees", "Suppliers"],
+                  },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-brick-500 font-display text-base text-brick-500">
+                      {String(i + 1).padStart(2, "0")}
+                    </div>
+                    <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-ink">
+                      {item.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                      {item.body}
+                    </p>
+                    {item.bullets && (
+                      <ul className="mt-2 space-y-1 text-sm leading-relaxed text-ink-soft">
+                        {item.bullets.map((b) => (
+                          <li key={b} className="flex gap-2">
+                            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brick-500" />
+                            {b}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
-                  <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-ink">
-                    {item.title}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                    {item.body}
-                  </p>
-                  {item.bullets && (
-                    <ul className="mt-2 space-y-1 text-sm leading-relaxed text-ink-soft">
-                      {item.bullets.map((b) => (
-                        <li key={b} className="flex gap-2">
-                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brick-500" />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
+                ))}
+              </div>
+
+              <div className="mt-4 rounded-xl border border-ink/10 bg-white p-5 text-center shadow-sm">
+                <p className="text-sm leading-relaxed text-ink">
+                  Continuous access to competitive benchmarking information and
+                  opportunities to search for and implement best practices in
+                  the current SME landscape.
+                </p>
+              </div>
             </div>
           </div>
 
