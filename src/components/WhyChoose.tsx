@@ -51,6 +51,16 @@ const values = [
     title: "VALUE CREATION",
     body: "Every recommendation must solve the issue or create other opportunities.",
   },
+  {
+    icon: UsersRound,
+    title: "OPERATIONS IMPROVEMENT",
+    body: "Streamline processes and remove friction so teams can deliver faster with fewer errors.",
+  },
+  {
+    icon: BookOpenCheck,
+    title: "CHANGE MANAGEMENT",
+    body: "Practical support to land change—clear roles, communication and first-line leader enablement.",
+  },
 ];
 
 type WhyChooseProps = {
@@ -65,44 +75,26 @@ export default function WhyChoose({
   return (
     <section className="relative bg-cream-100 py-24 lg:py-32">
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
-        {/* We Value */}
+        {/* Our Service Offerings */}
         {showValues && (
           <div>
             <div className="flex items-end justify-between gap-6">
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
-                  We Value
-                </span>
-                <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
-                  Principles that guide every engagement.
-                </h3>
-              </div>
-              <span className="hidden font-display text-sm italic text-ink-soft md:block">
-                Our Why
-              </span>
+              <h3 className="font-display text-4xl text-ink lg:text-5xl">Our Service Offerings</h3>
             </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {values.map((v, i) => {
-                const Icon = v.icon;
-                return (
-                  <div
-                    key={i}
-                    className="group relative flex flex-col rounded-2xl border border-ink/10 bg-white p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-                  >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-blue-50 text-slate-blue-600">
-                      <Icon size={22} />
-                    </div>
-                    <h4 className="mt-6 font-display text-lg tracking-wide text-ink">
-                      {v.title}
-                    </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                      {v.body}
-                    </p>
-                    <div className="mt-6 h-px w-10 bg-brick-400" />
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {values.map((v, i) => (
+                <div
+                  key={i}
+                  className="flex h-full min-h-[22rem] flex-col rounded-3xl border border-ink/10 bg-white p-6 transition hover:-translate-y-0.5"
+                  style={{ boxShadow: "-8px 0 10px rgba(35, 45, 220, 0.75), 0 3px 8px rgba(0, 0, 0, 0.12)" }}
+                >
+                  <div>
+                    <h4 className="font-display text-lg text-ink">{v.title}</h4>
+                    <p className="mt-3 text-sm leading-relaxed text-ink-soft">{v.body}</p>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
         )}

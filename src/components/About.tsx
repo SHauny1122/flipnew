@@ -513,205 +513,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* The Problem We Solve - mandate */}
-        <div className="mt-24">
-          <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-5">
-              <div className="flex gap-5">
-                <div className="w-1.5 shrink-0 self-stretch rounded-full bg-brick-500" />
-                <h3 className="font-display text-4xl leading-tight text-ink lg:text-5xl">
-                  The Problem
-                  <br />
-                  We Solve
-                </h3>
-              </div>
-              <p className="mt-6 font-display text-2xl text-ink">
-                FLIP the &ldquo;BUSINESS DESIGN!&rdquo;
-              </p>
-              <p className="mt-1 text-lg text-ink-soft">
-                RE- Design your better business
-              </p>
-              <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-                <span className="font-semibold text-brick-500">FLIP</span>{" "}
-                those factors that will affect your business overall
-                performance and continued success.
-              </p>
-              <p className="mt-4 text-lg font-semibold leading-relaxed text-ink">
-                Does your business design enable:
-              </p>
-              <ul className="mt-3 space-y-2 text-base leading-relaxed text-ink-soft">
-                <li className="flex gap-3">
-                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-                  Your business strategy implementation, and
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
-                  <span>
-                    the rapid identification of those{" "}
-                    <span className="font-semibold text-ink">
-                      VITAL FACTORS
-                    </span>{" "}
-                    that will affect the overall
-                  </span>
-                </li>
-              </ul>
-              <ul className="mt-3 space-y-1 pl-8 text-base leading-relaxed text-ink-soft">
-                <li>performance,</li>
-                <li>competitiveness and</li>
-                <li>future success</li>
-              </ul>
-              <p className="mt-3 text-base leading-relaxed text-ink-soft">
-                of your business?
-              </p>
-            </div>
-
-            <div className="lg:col-span-7">
-              <div className="rounded-xl border border-ink/10 bg-white p-5 text-center shadow-sm">
-                <p className="text-sm leading-relaxed text-ink">
-                  Rapid Identification of problems with{" "}
-                  <span className="font-semibold italic underline">
-                    VITAL FACTORS
-                  </span>{" "}
-                  such as:
-                </p>
-              </div>
-
-              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  {
-                    title: "Business Opportunities",
-                    body: "Business and entrepreneurial opportunities.",
-                  },
-                  {
-                    title: "Resource Utilisation",
-                    body: "Effective resource utilisation:",
-                    bullets: ["People", "Equipment", "Continuous improvement", "Cheaper, better, faster"],
-                  },
-                  {
-                    title: "Efficient Ways of Working",
-                    body: "Efficient ways of working:",
-                    bullets: ["Processes", "Interactions", "Systems", "Structures"],
-                  },
-                  {
-                    title: "People Engagement",
-                    body: "People engagement:",
-                    bullets: ["Alignment", "Engagement", "Culture", "HR services"],
-                  },
-                  {
-                    title: "Focused People and Energy",
-                    body: "Focused people and energy:",
-                    bullets: ["Competence", "Managing", "First-line leaders", "Clear roles"],
-                  },
-                  {
-                    title: "Meaningful Experiences",
-                    body: "Creation of meaningful experiences for:",
-                    bullets: ["Customers", "Employees", "Suppliers"],
-                  },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
-                  >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-brick-500 font-display text-base text-brick-500">
-                      {String(i + 1).padStart(2, "0")}
-                    </div>
-                    <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-ink">
-                      {item.title}
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                      {item.body}
-                    </p>
-                    {item.bullets && (
-                      <ul className="mt-2 space-y-1 text-sm leading-relaxed text-ink-soft">
-                        {item.bullets.map((b) => (
-                          <li key={b} className="flex gap-2">
-                            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brick-500" />
-                            {b}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-4 rounded-xl border border-ink/10 bg-white p-5 text-center shadow-sm">
-                <p className="text-sm leading-relaxed text-ink">
-                  Continuous access to competitive benchmarking information and
-                  opportunities to search for and implement best practices in
-                  the current SME landscape.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative mt-10 h-56 w-full overflow-hidden rounded-2xl shadow-sm lg:h-72">
-            <Image
-              src="/brand/campaign-creators-gMsnXqILjp4-unsplash.jpg"
-              alt="Team collaborating around a laptop"
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
-          </div>
-        </div>
-
-        {/* The Problems We Flip */}
-        <div className="mt-24 grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
-              The Problems We Flip
-            </span>
-            <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
-              A &ldquo;better&rdquo; business isn&rsquo;t just about having a
-              good product.
-            </h3>
-            <p className="mt-5 text-base leading-relaxed text-ink-soft">
-              it&rsquo;s about creating a system where value creation, capture,
-              and distribution work in harmony.
-            </p>
-
-            <div className="mt-8 space-y-3">
-              {problemPoints.map((p, i) => {
-                const Icon = p.icon;
-                return (
-                  <div
-                    key={i}
-                    className="flex items-start gap-3 rounded-xl border border-ink/5 bg-white/80 p-4 shadow-sm"
-                  >
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-sage-100 text-sage-600">
-                      <Icon size={16} />
-                    </div>
-                    <p className="text-sm leading-relaxed text-ink-soft">
-                      {p.text}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="lg:col-span-7">
-            <div className="relative rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-10">
-              <div className="absolute -top-3 left-8 rounded-full bg-brick-500 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-cream-50">
-                Dimensions
-              </div>
-              <ul className="space-y-5">
-                {pillars.map((p, i) => (
-                  <li key={i} className="flex gap-4">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-blue-50 font-display text-sm text-slate-blue-700">
-                      {i + 1}
-                    </span>
-                    <p className="text-sm leading-relaxed text-ink-soft">
-                      {p}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Problems To Solve */}
         <div className="mt-24">
           <div className="flex gap-5">
@@ -819,6 +620,184 @@ export default function About() {
             </p>
           </div>
 
+          
+        </div>
+
+        {/* The Problem We Solve - mandate */}
+        <div className="mt-24 grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <div className="flex gap-5">
+              <div className="w-1.5 shrink-0 self-stretch rounded-full bg-brick-500" />
+              <h3 className="font-display text-4xl leading-tight text-ink lg:text-5xl">
+                The Problem
+                <br />
+                We Solve
+              </h3>
+            </div>
+            <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+              <span className="font-semibold text-brick-500">FLIP</span>{" "}
+              those factors that will affect your business overall
+              performance and continued success.
+            </p>
+            <p className="mt-4 text-lg font-semibold leading-relaxed text-ink">
+              Does your business design enable:
+            </p>
+            <ul className="mt-3 space-y-2 text-base leading-relaxed text-ink-soft">
+              <li className="flex gap-3">
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
+                Your business strategy implementation, and
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
+                <span>
+                  the rapid identification of those{" "}
+                  <span className="font-semibold text-ink">VITAL FACTORS</span>{" "}
+                  that will affect the overall
+                </span>
+              </li>
+            </ul>
+            <ul className="mt-3 space-y-1 pl-8 text-base leading-relaxed text-ink-soft">
+              <li>performance,</li>
+              <li>competitiveness and</li>
+              <li>future success</li>
+            </ul>
+            <p className="mt-3 text-base leading-relaxed text-ink-soft">
+              of your business?
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-7">
+            {[
+              {
+                title: "Rapid Identification",
+                body: "Rapid identification of problems involving vital factors that affect business performance, competitiveness, and future success.",
+              },
+              {
+                title: "Business Opportunities",
+                body: "Business and entrepreneurial opportunities.",
+              },
+              {
+                title: "Resource Utilisation",
+                body: "Effective resource utilisation:",
+                bullets: ["People", "Equipment", "Continuous improvement", "Cheaper, better, faster"],
+              },
+              {
+                title: "Efficient Ways of Working",
+                body: "Efficient ways of working:",
+                bullets: ["Processes", "Interactions", "Systems", "Structures"],
+              },
+              {
+                title: "People Engagement",
+                body: "People engagement:",
+                bullets: ["Alignment", "Engagement", "Culture", "HR services"],
+              },
+              {
+                title: "Focused People and Energy",
+                body: "Focused people and energy:",
+                bullets: ["Competence", "Managing", "First-line leaders", "Clear roles"],
+              },
+              {
+                title: "Meaningful Experiences",
+                body: "Creation of meaningful experiences for:",
+                bullets: ["Customers", "Employees", "Suppliers"],
+              },
+              {
+                title: "Competitive Benchmarking",
+                body: "Continuous access to competitive benchmarking information and opportunities to search for and implement best practices in the current SME landscape.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-brick-500 font-display text-base text-brick-500">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-ink">
+                  {item.title}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                  {item.body}
+                </p>
+                {item.bullets && (
+                  <ul className="mt-2 space-y-1 text-sm leading-relaxed text-ink-soft">
+                    {item.bullets.map((b) => (
+                      <li key={b} className="flex gap-2">
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brick-500" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="relative mt-10 h-56 w-full overflow-hidden rounded-2xl shadow-sm lg:h-72 lg:col-span-12">
+            <Image
+              src="/brand/campaign-creators-gMsnXqILjp4-unsplash.jpg"
+              alt="Team collaborating around a laptop"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+        </div>
+
+        {/* The Problems We Flip */}
+        <div className="mt-24 grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
+              The Problems We Flip
+            </span>
+            <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
+              A &ldquo;better&rdquo; business isn&rsquo;t just about having a
+              good product.
+            </h3>
+            <p className="mt-5 text-base leading-relaxed text-ink-soft">
+              it&rsquo;s about creating a system where value creation, capture,
+              and distribution work in harmony.
+            </p>
+
+            <div className="mt-8 space-y-3">
+              {problemPoints.map((p, i) => {
+                const Icon = p.icon;
+                return (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 rounded-xl border border-ink/5 bg-white/80 p-4 shadow-sm"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-sage-100 text-sage-600">
+                      <Icon size={16} />
+                    </div>
+                    <p className="text-sm leading-relaxed text-ink-soft">
+                      {p.text}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="lg:col-span-7">
+            <div className="relative rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-10">
+              <div className="absolute -top-3 left-8 rounded-full bg-brick-500 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-cream-50">
+                Dimensions
+              </div>
+              <ul className="space-y-5">
+                {pillars.map((p, i) => (
+                  <li key={i} className="flex gap-4">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-blue-50 font-display text-sm text-slate-blue-700">
+                      {i + 1}
+                    </span>
+                    <p className="text-sm leading-relaxed text-ink-soft">
+                      {p}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
 
       </div>
