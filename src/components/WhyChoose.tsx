@@ -24,43 +24,84 @@ const reasons = [
 const values = [
   {
     icon: HandHeart,
-    title: "APPROACHABILITY",
-    body: "We speak straight plain language, being responsive, jargon-free, and to the point.",
+    title: "Organisation Development",
+    longBody: [
+      "Focuses on businesses getting better through strengthening how they work and focusing on what matters most.",
+      "Identifying the key challenges affecting your workplace, then prioritise the changes that will have the greatest impact.",
+      "Strengthen frontline leadership, enhance employee engagement, and drive productivity to achieve results.",
+      "Work closely with your business to determine which strategies, processes, or actions will deliver the most value and serve as a hands-on partner.",
+    ],
   },
   {
     icon: Eye,
-    title: "OPENESS",
-    body: "We only recommend what you truly need.",
+    title: "Business Benchmarking",
+    longBody: [
+      "Benchmarking helps SMEs improve profitability, productivity, and customer satisfaction.",
+      <span key="l1" className="text-red-600 font-medium">better or worse?</span>,
+      <span key="l2" className="text-amber-600 font-medium">top or bottom?</span>,
+      <span key="l3" className="text-blue-600 font-medium">average or excellent?</span>,
+      <span key="l4" className="text-green-600 font-medium">leading or lagging?</span>,
+      <span key="l5" className="text-red-600 font-medium">how do you compare to the rest?</span>,
+      "If you’re an SME owner, start simple, focus on actionable insights, and review regularly.",
+    ],
   },
   {
     icon: UsersRound,
-    title: "PARTNERING",
-    body: "We are in this with you because relationships matter beyond the initial project",
+    title: "Business Design",
+    longBody: [
+      "Effective business design clarifies how work gets done.",
+      "Focuses on structuring roles, teams, and workflows to support business strategy and improve efficiency.",
+      "To ensure the right capabilities, decision-making authority, and that the resources are in place so the business can operate effectively and grow successfully.",
+      "Getting your business design right unlocks a powerful and often overlooked competitive advantage.",
+    ],
   },
   {
     icon: BookOpenCheck,
-    title: "UNDERSTANDING",
-    body: "For us understanding builds deeper connections than pure expertise.",
+    title: "Strategy Alignment",
+    longBody: [
+      "Focuses on translating organisational strategy into actionable plans and measurable results.",
+      "We ensure alignment between goals, initiatives, and performance tracking so the business can execute strategy effectively and adapt to changing business conditions.",
+      "This process strengthens leaders’ ability to translate strategy into action—building clarity, accountability, and confidence so strategy is not only defined, but effectively achieved.",
+    ],
   },
   {
     icon: Wrench,
-    title: "PRACTICALITY",
-    body: "We deliver actionable solutions that work in the real world.",
+    title: "Frontline Leadership Development",
+    longBody: [
+      "Focuses on building capable frontline leaders who can drive strategy, manage change, and deliver results.",
+      "To strengthen leadership skills, decision-making, and accountability will ensure strong management and sustained business performance and growth.",
+      "Your people are an asset",
+      "It is a flexible journey and supports them at critical moments—so they can perform at their best and deliver.",
+    ],
   },
   {
     icon: Gem,
-    title: "VALUE CREATION",
-    body: "Every recommendation must solve the issue or create other opportunities.",
+    title: "People Strategy",
+    longBody: [
+      "A strong business begins with a thoughtful, well-aligned approach to its people.",
+      "Focus on using data, systems, and frameworks to manage and optimise workforce performance.",
+      "We develop talent decisions, improve productivity, and enable organisations to align people capabilities with business objectives while focusing on employee growth.",
+      "We help leaders ask the right questions, challenge assumptions, and design people practices that enable performance, adaptability, and long-term success.",
+    ],
   },
   {
     icon: UsersRound,
-    title: "OPERATIONS IMPROVEMENT",
-    body: "Streamline processes and remove friction so teams can deliver faster with fewer errors.",
+    title: "Business Process Solutions",
+    longBody: [
+      "Change, disruption, and reorganisation place significant demands on businesses.",
+      "These challenges need to be navigated through clear insight and practical strategies that improve performance and resilience.",
+      "Focus on strengthening how work is executed across the business. Identify inefficiencies, remove barriers, and improve how work gets done by streamlining, standardising, and optimising processes.",
+      "To increase efficiency, reduce costs, improve quality, and enable scalable, consistent business operations while focusing on growth.",
+    ],
   },
   {
     icon: BookOpenCheck,
-    title: "CHANGE MANAGEMENT",
-    body: "Practical support to land change—clear roles, communication and first-line leader enablement.",
+    title: "Artificial Intelligence in Business",
+    longBody: [
+      "Artificial intelligence in business is revolutionising how a business operates by automating time-consuming tasks.",
+      "AI and automation solutions replace manual workflows with intelligent, self-learning systems. Thus, AI-powered automation and scale reduce dependency on human intervention and minimise errors.",
+      "With AI and automation solutions for small businesses, bottlenecks can be eliminated. Thus, they can increase profitability with the help of AI cost reduction through automation.",
+    ],
   },
 ];
 
@@ -87,7 +128,7 @@ export default function WhyChoose({
               {values.map((v, i) => {
                 const wrapperClass = "relative isolate";
                 const baseCardClass =
-                  "relative z-[1] flex h-full min-h-[22rem] flex-col rounded-3xl border border-ink/10 bg-white p-6 transition hover:-translate-y-0.5";
+                  "relative z-[1] flex h-full min-h-[22rem] flex-col rounded-3xl border border-ink/10 bg-white p-6 text-center transition hover:-translate-y-0.5";
 
                 // Variant-specific visuals
                 let cardStyle: React.CSSProperties = {};
@@ -138,7 +179,15 @@ export default function WhyChoose({
                     {backing}
                     <div className={baseCardClass} style={cardStyle}>
                       <h4 className="font-display text-lg text-ink">{v.title}</h4>
-                      <p className="mt-3 text-sm leading-relaxed text-ink-soft">{v.body}</p>
+                      {Array.isArray((v as any).longBody) ? (
+                        ((v as any).longBody as any[]).map((t, idx) => (
+                          <p key={idx} className="mt-3 text-sm leading-relaxed text-ink-soft">
+                            {t}
+                          </p>
+                        ))
+                      ) : (
+                        <p className="mt-3 text-sm leading-relaxed text-ink-soft">{(v as any).body}</p>
+                      )}
                     </div>
                   </div>
                 );
