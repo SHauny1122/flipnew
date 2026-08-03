@@ -130,55 +130,24 @@ export default function WhyChoose({
                 const baseCardClass =
                   "relative z-[1] flex h-full min-h-[22rem] flex-col rounded-3xl border border-ink/10 bg-white p-6 text-center transition hover:-translate-y-0.5";
 
-                // Variant-specific visuals
-                let cardStyle: React.CSSProperties = {};
-                let backing: React.ReactNode = null;
-
-                if (i <= 1) {
-                  // Cards 1–2: current style
-                  cardStyle = {
-                    boxShadow:
-                      "-8px 0 10px rgba(35, 45, 220, 0.75), 0 3px 8px rgba(0, 0, 0, 0.12)",
-                  };
-                } else if (i <= 3) {
-                  // Cards 3–4: stronger left-edge style
-                  cardStyle = {
-                    boxShadow:
-                      "-14px 0 22px rgba(35,45,220,0.90), -22px 0 34px rgba(35,45,220,0.45), 0 4px 10px rgba(0,0,0,0.12)",
-                  };
-                } else if (i <= 5) {
-                  // Cards 5–6: soft gradient style (subtle, fades top/bottom)
-                  backing = (
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute -left-2 top-1 bottom-1 w-8 rounded-[24px] blur-[2px]"
-                      style={{
-                        background:
-                          "linear-gradient(180deg, rgba(82,88,238,0) 0%, rgba(82,88,238,0.28) 35%, rgba(82,88,238,0.28) 65%, rgba(82,88,238,0) 100%)",
-                      }}
-                    />
-                  );
-                  cardStyle = { boxShadow: "0 3px 8px rgba(0, 0, 0, 0.12)" };
-                } else {
-                  // Cards 7–8: layered backing style (blue shape behind card)
-                  backing = (
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute -left-[9px] top-0 bottom-0 w-[35px] rounded-[24px_0_0_24px] blur-[1px]"
-                      style={{
-                        background:
-                          "linear-gradient(180deg, #5258ee 0%, #2424d8 50%, #353be9 100%)",
-                      }}
-                    />
-                  );
-                  cardStyle = { boxShadow: "0 3px 8px rgba(0,0,0,0.12)" };
-                }
+                // Unified: layered backing style for all cards
+                const backing = (
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute -left-[9px] top-0 bottom-0 w-[35px] rounded-[24px_0_0_24px] blur-[1px]"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #5258ee 0%, #2424d8 50%, #353be9 100%)",
+                    }}
+                  />
+                );
+                const cardStyle: React.CSSProperties = { boxShadow: "0 3px 8px rgba(0,0,0,0.12)" };
 
                 return (
                   <div key={i} className={wrapperClass}>
                     {backing}
                     <div className={baseCardClass} style={cardStyle}>
-                      <h4 className="font-display text-lg text-ink">{v.title}</h4>
+                      <h4 className="font-display text-xl lg:text-2xl font-semibold text-ink">{v.title}</h4>
                       {Array.isArray((v as any).longBody) ? (
                         ((v as any).longBody as any[]).map((t, idx) => (
                           <p key={idx} className="mt-3 text-sm leading-relaxed text-ink-soft">
