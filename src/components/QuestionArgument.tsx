@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function QuestionArgument() {
   return (
     <section
+      id="argument"
       className="relative py-24 text-cream-50 lg:py-32"
       style={{ backgroundColor: "#8E5A63" }}
     >
@@ -24,7 +25,7 @@ export default function QuestionArgument() {
                 with <span className="italic" style={{ color: "#82a590" }}>uncertainty</span>.
               </h3>
 
-              <ul className="mt-8 max-w-4xl space-y-4 text-base leading-relaxed text-ink-soft">
+              <ul className="mt-8 max-w-4xl space-y-4 text-lg leading-relaxed text-ink-soft">
                 <li className="flex gap-3">
                   <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brick-500" />
                   But within that uncertainty exist innumerable opportunities to
@@ -43,7 +44,21 @@ export default function QuestionArgument() {
               </ul>
             </div>
 
-            <div className="mt-8 rounded-2xl border border-brick-300 bg-white p-8 text-center shadow-sm lg:max-w-[59rem] lg:p-10">
+            <div className="mt-8 rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm lg:max-w-[59rem]">
+              <p className="font-display text-2xl text-ink">
+                WHAT can be BETTER in MY BUSINESS?
+              </p>
+              <p className="mt-3 text-lg leading-relaxed text-ink-soft">
+                START and Join Conversations and initiatives for Small Business
+                Entrepreneurs in South Africa and Africa. Become a Platinum Member
+                of the most comprehensive platform of its kind available.
+              </p>
+              <p className="mt-3 text-lg font-semibold uppercase tracking-widest text-brick-500">
+                monthly fee benefits
+              </p>
+            </div>
+
+            <div className="mt-12 rounded-2xl border border-brick-300 bg-white p-8 text-center shadow-sm lg:max-w-[59rem] lg:p-10">
               <h4 className="text-2xl font-semibold uppercase text-ink">
                 the mandate for continuous re-invention
               </h4>
@@ -52,20 +67,6 @@ export default function QuestionArgument() {
                 usual thing. We are trying to see it differently. It must be
                 built into our DNA, this idea that we haven&rsquo;t got it right
                 yet &ndash; our business design.&rdquo;
-              </p>
-            </div>
-
-            <div className="mt-12 rounded-2xl border-l-4 border-brick-500 bg-white p-6 shadow-sm lg:max-w-[59rem]">
-              <p className="font-display text-2xl text-ink">
-                WHAT can be BETTER in MY BUSINESS?
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                START and Join Conversations and initiatives for Small Business
-                Entrepreneurs in South Africa and Africa. Become a Platinum Member
-                of the most comprehensive platform of its kind available.
-              </p>
-              <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-brick-500">
-                monthly fee benefits
               </p>
             </div>
           </div>

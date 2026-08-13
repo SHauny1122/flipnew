@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { ArrowRight, BookOpen, ShieldCheck, Sparkles } from "lucide-react";
+import { Caveat } from "next/font/google";
+
+const handwritten = Caveat({ subsets: ["latin"], weight: ["400", "600", "700"], display: "swap" });
 
 export default function Hero() {
   return (
@@ -20,16 +23,28 @@ export default function Hero() {
           <h1 className="mt-6 font-display text-5xl leading-[1.02] text-ink sm:text-6xl lg:text-7xl">
             <span style={{ color: "#5F8E9B" }}>(Re-) Design</span>{" "}
             <span className="relative inline-block align-baseline">
-              <span className="absolute -top-10 left-[calc(50%+38px)] -translate-x-[25%] -rotate-12 font-serif text-4xl italic sm:text-5xl" style={{ color: "#82a590" }}>
+              <span
+                className={`absolute -top-10 left-[calc(50%+38px)] -translate-x-[25%] -rotate-12 text-4xl sm:text-5xl ${handwritten.className}`}
+                style={{ color: "#82a590" }}
+              >
                 Your
               </span>
               <span className="relative" style={{ color: "#5F8E9B" }}>
                 A
-                <span
+                <svg
                   aria-hidden="true"
-                  className="pointer-events-none absolute left-1/2 top-[65%] h-[3px] w-[140%] -translate-x-1/2 -translate-y-1/2 -rotate-[18deg] rounded-full"
-                  style={{ backgroundColor: "#82a590" }}
-                />
+                  className="pointer-events-none absolute left-1/2 top-[56%] h-[36px] w-[120%] -translate-x-1/2 -translate-y-1/2"
+                  viewBox="0 0 140 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 34 C 28 28, 92 10, 136 6"
+                    stroke="#82a590"
+                    strokeWidth="6"
+                    strokeLinecap="round"
+                  />
+                </svg>
               </span>
             </span>
             <br />

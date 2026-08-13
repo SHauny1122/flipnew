@@ -150,11 +150,13 @@ const values = [
 type WhyChooseProps = {
   showValues?: boolean;
   showWhyChoose?: boolean;
+  id?: string;
 };
 
 export default function WhyChoose({
   showValues = true,
   showWhyChoose = true,
+  id,
 }: WhyChooseProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -173,7 +175,7 @@ export default function WhyChoose({
     };
   }, [activeIndex]);
   return (
-    <section className="relative bg-cream-100 py-24 lg:py-32">
+    <section id={id} className="relative bg-cream-100 py-24 lg:py-32">
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
         {/* Our Service Offerings */}
         {showValues && (
