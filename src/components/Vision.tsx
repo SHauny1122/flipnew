@@ -42,9 +42,9 @@ export default function Vision() {
           {/* Vision */}
           <div className="lg:col-span-4">
             <div className="flex flex-col justify-between rounded-3xl bg-slate-blue-700 p-10 text-cream-50 shadow-lg lg:h-full lg:min-h-[54rem]">
-              <span className="text-base font-bold uppercase tracking-[0.2em] text-sage-300">
+              <h4 className="font-display text-3xl text-sage-300 lg:text-4xl">
                 Our Mission
-              </span>
+              </h4>
               <p className="mt-6 font-display text-3xl leading-snug lg:text-4xl">
                 To become a trusted partner for SMEs growth, creating a future
                 where there is access to tailored, practical tools,
@@ -53,7 +53,7 @@ export default function Vision() {
               </p>
               <div className="mt-8 h-px w-16 bg-brick-400" />
               <div className="mt-6">
-                <h4 className="font-display text-3xl text-cream-50 lg:text-4xl">
+                <h4 className="font-display text-3xl text-sage-300 lg:text-4xl">
                   Our Vision
                 </h4>
                 <p className="mt-4 text-2xl leading-relaxed text-cream-100/90">
@@ -73,7 +73,7 @@ export default function Vision() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black">
                   We Value
                 </span>
-                <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
+                <h3 className="mt-3 font-display text-4xl text-sage-300 lg:text-5xl">
                   Principles that guide every engagement.
                 </h3>
               </div>

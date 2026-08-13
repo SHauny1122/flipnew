@@ -74,7 +74,7 @@ const steps = [
 
 export default function Approach() {
   return (
-    <section id="approach" className="relative bg-slate-blue-800 py-24 text-cream-50 lg:py-32">
+    <section id="approach" className="relative py-24 text-cream-50 lg:py-32" style={{ backgroundColor: "#5F8E9B" }}>
       {/* decorative sand block */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-cream-100 to-transparent opacity-10" />
 
@@ -108,7 +108,7 @@ export default function Approach() {
             return (
               <div
                 key={s.no}
-                className="group relative flex flex-col rounded-2xl border border-cream-50/10 bg-white/[0.03] p-6 backdrop-blur transition hover:bg-white/[0.06]"
+                className="group relative flex flex-col rounded-2xl border border-cream-50/10 bg-[#4F79A8] p-6 transition"
               >
                 <div className="flex items-start justify-between">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cream-50/10 text-sage-300">

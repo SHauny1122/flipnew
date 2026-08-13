@@ -18,11 +18,11 @@ export default function Home() {
         <Hero />
         <QuestionArgument />
         <About />
-        <Spiral />
         <Vision />
-        <WhyChoose showValues showWhyChoose={false} />
+        <WhyChoose id="offerings" showValues showWhyChoose={false} />
         <Approach />
-        <WhyChoose showValues={false} showWhyChoose />
+        <WhyChoose id="why-choose" showValues={false} showWhyChoose />
+        <Spiral />
         <Projects />
         <Contact />
       </main>

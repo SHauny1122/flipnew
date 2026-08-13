@@ -331,7 +331,7 @@ export default function About() {
                                   {box.title}
                                 </p>
 
-                                <div className="pointer-events-none absolute right-2 top-2 z-30 w-56 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover/box:translate-x-4 group-hover/box:-translate-y-4 group-hover/box:opacity-100">
+                                <div className="pointer-events-none absolute right-2 top-2 z-30 w-56 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover/box:translate-x-4 group-hover/box:-translate-y-4 group-hover/box:opacity-100 lg:-right-[260px] lg:top-0 lg:origin-top-left lg:group-hover/box:translate-x-0 lg:group-hover/box:-translate-y-2">
                                   {box.detail}
                                 </div>
 
@@ -388,7 +388,7 @@ export default function About() {
                       )}
 
                       {!isFirstCard && (
-                        <div className="pointer-events-none absolute right-3 top-3 z-30 w-60 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100">
+                        <div className="pointer-events-none absolute right-3 top-3 z-30 w-60 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100 lg:-right-[260px] lg:top-0 lg:origin-top-left lg:group-hover:translate-x-0 lg:group-hover:-translate-y-2">
                           {isSaveMoneyCard && (
                           <p className="mb-2 font-semibold" style={{ color: "#4F79A8" }}>
                             Exclusive High Value Deals and massive discounts
@@ -475,7 +475,13 @@ export default function About() {
                     </div>
                   </div>
 
-                  <div className="pointer-events-none absolute right-3 top-3 z-30 w-60 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100">
+                  <div
+                    className={`pointer-events-none absolute right-3 top-3 z-30 w-60 origin-top-right rounded-lg border border-ink/10 bg-white p-3 text-sm leading-relaxed text-ink-soft opacity-0 shadow-lg transition duration-200 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100 ${
+                      item.topic === "ACCESS TO FUNDING"
+                        ? "lg:right-full lg:left-auto lg:mr-3 lg:top-0 lg:origin-top-right lg:group-hover:translate-x-0 lg:group-hover:-translate-y-2"
+                        : "lg:-right-[260px] lg:top-0 lg:origin-top-left lg:group-hover:translate-x-0 lg:group-hover:-translate-y-2"
+                    }`}
+                  >
                     {item.detail}
                   </div>
                 </div>
@@ -666,7 +672,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-7">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-7 lg:translate-x-38">
             {[
               {
                 title: "Rapid Identification",
@@ -708,7 +714,9 @@ export default function About() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-ink/10 bg-white p-5 shadow-sm"
+                className={`rounded-xl border border-ink/10 bg-white p-5 shadow-sm ${
+                  i === 0 || i === 7 ? "lg:col-span-3 lg:min-h-[110px]" : ""
+                } ${i === 1 || i === 4 ? "lg:col-start-1" : ""}`}
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-brick-500 font-display text-base text-brick-500">
                   {String(i + 1).padStart(2, "0")}
@@ -744,61 +752,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* The Problems We Flip */}
-        <div className="mt-24 grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brick-500">
-              The Problems We Flip
-            </span>
-            <h3 className="mt-3 font-display text-4xl text-ink lg:text-5xl">
-              A &ldquo;better&rdquo; business isn&rsquo;t just about having a
-              good product.
-            </h3>
-            <p className="mt-5 text-base leading-relaxed text-ink-soft">
-              it&rsquo;s about creating a system where value creation, capture,
-              and distribution work in harmony.
-            </p>
-
-            <div className="mt-8 space-y-3">
-              {problemPoints.map((p, i) => {
-                const Icon = p.icon;
-                return (
-                  <div
-                    key={i}
-                    className="flex items-start gap-3 rounded-xl border border-ink/5 bg-white/80 p-4 shadow-sm"
-                  >
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-sage-100 text-sage-600">
-                      <Icon size={16} />
-                    </div>
-                    <p className="text-sm leading-relaxed text-ink-soft">
-                      {p.text}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="lg:col-span-7">
-            <div className="relative rounded-2xl border border-ink/10 bg-white p-8 shadow-sm lg:p-10">
-              <div className="absolute -top-3 left-8 rounded-full bg-brick-500 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-cream-50">
-                Dimensions
-              </div>
-              <ul className="space-y-5">
-                {pillars.map((p, i) => (
-                  <li key={i} className="flex gap-4">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-blue-50 font-display text-sm text-slate-blue-700">
-                      {i + 1}
-                    </span>
-                    <p className="text-sm leading-relaxed text-ink-soft">
-                      {p}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+        
 
       </div>
       </section>
