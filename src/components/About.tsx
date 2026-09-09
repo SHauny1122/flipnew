@@ -411,7 +411,7 @@ export default function About() {
               <div className="relative lg:h-[520px]">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-ink/10 lg:absolute lg:right-0 lg:top-0 lg:h-[560px] lg:w-full">
                   <Image
-                    src="/brand/imag5.png"
+                    src="/brand/ChatGPT Image Sep 9, 2026, 10_30_35 AM.png"
                     alt="NSBC membership workspace"
                     width={900}
                     height={1100}
@@ -492,14 +492,15 @@ export default function About() {
           <div className="mt-10 rounded-2xl border border-ink/10 bg-cream-50 px-5 py-4 lg:px-8">
             <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex items-center gap-4 lg:gap-6">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-ink/10 bg-white text-center shadow-sm">
-                  <span className="text-[9px] font-semibold uppercase tracking-wider text-ink-soft">
-                    NSBC
-                    <br />
-                    Platinum
-                    <br />
-                    Member
-                  </span>
+                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full border border-ink/10 bg-white shadow-sm">
+                  <Image
+                    src="/brand/ChatGPT Image Sep 9, 2026, 09_48_42 AM.png"
+                    alt="NSBC Platinum Member"
+                    width={256}
+                    height={256}
+                    quality={100}
+                    className="h-full w-full scale-[1.3] object-cover"
+                  />
                 </div>
 
                 <div>
@@ -631,7 +632,7 @@ export default function About() {
 
         {/* The Problem We Solve - mandate */}
         <div className="mt-24 grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="flex flex-col lg:col-span-5">
             <div className="flex gap-5">
               <div className="w-1.5 shrink-0 self-stretch rounded-full bg-brick-500" />
               <h3 className="font-display text-4xl leading-tight text-ink lg:text-5xl">
@@ -670,6 +671,16 @@ export default function About() {
             <p className="mt-3 text-base leading-relaxed text-ink-soft">
               of your business?
             </p>
+
+            <div className="relative mt-10 min-h-[220px] flex-1 overflow-hidden rounded-2xl shadow-sm lg:min-h-0">
+              <Image
+                src="/brand/campaign-creators-gMsnXqILjp4-unsplash.jpg"
+                alt="Team collaborating around a laptop"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+              />
+            </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-7 lg:translate-x-38">
@@ -741,15 +752,6 @@ export default function About() {
             ))}
           </div>
 
-          <div className="relative mt-10 h-56 w-full overflow-hidden rounded-2xl shadow-sm lg:h-72 lg:col-span-12">
-            <Image
-              src="/brand/campaign-creators-gMsnXqILjp4-unsplash.jpg"
-              alt="Team collaborating around a laptop"
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
-          </div>
         </div>
 
         

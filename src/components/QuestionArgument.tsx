@@ -9,10 +9,7 @@ export default function QuestionArgument() {
     >
       <div className="mx-auto max-w-[110rem] px-6 lg:px-10">
         <div className="mb-10 max-w-4xl">
-          <span className="text-2xl font-semibold uppercase tracking-[0.2em] text-cream-50">
-            Question? / Argument
-          </span>
-          <h2 className="mt-3 font-display text-4xl text-cream-50 lg:text-5xl">
+          <h2 className="font-display text-4xl text-cream-50 lg:text-5xl">
             Question? / Argument
           </h2>
         </div>

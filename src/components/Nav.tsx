@@ -5,8 +5,8 @@ import { X } from "lucide-react";
 import Image from "next/image";
 
 const links = [
-  { href: "#about", label: "About" },
   { href: "#argument", label: "Question / Argument" },
+  { href: "#about", label: "About" },
   { href: "#services", label: "We Value" },
   { href: "#offerings", label: "Our Service Offerings" },
   { href: "#approach", label: "Our Approach" },
@@ -73,25 +73,25 @@ export default function Nav() {
           </span>
         </a>
 
-        <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block">
+        <div className="hidden items-center gap-3 md:flex">
           <button
             type="button"
             aria-label="Open menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(true)}
-            className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/40 px-4 py-2 text-sm font-medium text-ink shadow-sm backdrop-blur-sm transition hover:bg-white/70 hover:text-slate-blue-700"
+            className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/40 px-4 py-2 text-sm font-medium text-ink shadow-sm backdrop-blur-sm transition hover:bg-white/70 hover:text-slate-blue-700"
           >
             <span>Menu</span>
             <span className="inline-block h-2 w-2 rounded-full bg-ink" />
           </button>
-        </div>
 
-        <a
-          href="#contact"
-          className="hidden rounded-full bg-slate-blue-700 px-5 py-2 text-sm font-medium text-cream-50 shadow-sm transition hover:bg-slate-blue-800 md:inline-flex"
-        >
-          Book a Discussion
-        </a>
+          <a
+            href="#contact"
+            className="rounded-full bg-slate-blue-700 px-5 py-2 text-sm font-medium text-cream-50 shadow-sm transition hover:bg-slate-blue-800"
+          >
+            Book a Discussion
+          </a>
+        </div>
 
         <button
           type="button"

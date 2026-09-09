@@ -49,10 +49,8 @@ export default function Spiral() {
               </p>
               <p className="mt-3 text-sm text-ink-soft">
                 Yearly subscription of{" "}
-                <span className="font-semibold text-ink">R3850.00</span> (vat
-                excl) / only{" "}
-                <span className="font-semibold text-ink">R385 per month</span>{" "}
-                / many benefits and initiatives.
+                <span className="font-semibold text-ink">R995.00</span> (vat
+                excl) / many benefits and initiatives.
               </p>
             </div>
           </div>

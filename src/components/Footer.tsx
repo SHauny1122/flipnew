@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const links = [
   { href: "#top", label: "Home" },
   { href: "#about", label: "About" },
@@ -12,9 +14,13 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[110rem] gap-10 px-6 lg:grid-cols-12 lg:px-10">
         <div className="lg:col-span-6">
           <div className="flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-cream-50 font-display text-lg font-semibold text-slate-blue-800">
-              F
-            </span>
+            <Image
+              src="/brand/ChatGPT Image Sep 9, 2026, 10_44_20 AM.png"
+              alt="FlipWorks"
+              width={32}
+              height={32}
+              className="h-8 w-8 rounded-full object-cover"
+            />
             <span className="font-display text-lg font-semibold tracking-tight text-cream-50">
               FLiP.WORKS PTY Ltd. Consulting
             </span>
