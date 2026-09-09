@@ -725,24 +725,28 @@ export default function About() {
             ].map((item, i) => (
               <div
                 key={i}
-                className={`rounded-xl border border-ink/10 bg-white p-5 shadow-sm ${
+                className={`relative overflow-hidden rounded-xl border border-[#ded3c6] bg-[#fbf7ef] p-5 shadow-[0_10px_24px_rgba(31,42,54,0.08)] ${
                   i === 0 || i === 7 ? "lg:col-span-3 lg:min-h-[110px]" : ""
                 } ${i === 1 || i === 4 ? "lg:col-start-1" : ""}`}
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-brick-500 font-display text-base text-brick-500">
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full border border-[#8e5a63]/10"
+                />
+                <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-lg border border-[#a96b73] bg-[#fffaf3] font-display text-sm font-medium text-[#8e5a63] shadow-[0_2px_6px_rgba(31,42,54,0.06)]">
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-ink">
+                <p className="relative z-10 mt-4 text-sm font-semibold uppercase tracking-wide text-ink">
                   {item.title}
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                <p className="relative z-10 mt-2 text-sm leading-relaxed text-ink-soft">
                   {item.body}
                 </p>
                 {item.bullets && (
-                  <ul className="mt-2 space-y-1 text-sm leading-relaxed text-ink-soft">
+                  <ul className="relative z-10 mt-2 space-y-1 text-sm leading-relaxed text-ink-soft">
                     {item.bullets.map((b) => (
                       <li key={b} className="flex gap-2">
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brick-500" />
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#a96b73]" />
                         {b}
                       </li>
                     ))}
