@@ -16,9 +16,9 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "FlipWorks | SME Consulting and Support",
+  title: "FlipWorks | Better Business, Better Work",
   description:
-    "FlipWorks Consulting \u2014 practical, affordable consulting for small and medium businesses. (Re) Design a better business.",
+    "Practical consulting for small and medium businesses. Explore how FlipWorks helps SMEs work better and connect with NSBC membership opportunities.",
 };
 
 export default function RootLayout({
